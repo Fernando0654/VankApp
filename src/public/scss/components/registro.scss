@@ -1,18 +1,12 @@
 @use "../util/colors" as colors;
 @use "../util/mixins" as mix;
 
-// :root {
-//     --primary-color: #4c3288;
-//     --neutral-color: #dcdce8;
-//     --background-light: #dfe0eb;
-//     --background-dark: #ffffff;
-//     --box-size: 20px;
-// }
-
 .signup-wrapper {
-  background-image: url("../assets/img/bg_user_panel.jpg");
-  background-position: center;
-  background-size: cover;
+  background: 
+    url(../assets/img/bg-pattern-bottom.svg);
+  background-repeat: repeat;
+  background-size: 50%;
+  background-position: left;
   min-height: 100vh;
   form {
     width: 90%;
@@ -21,10 +15,10 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    background-color: colors.$black_soft;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.397);
+    background-color: #082946;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
     border-radius: 10px;
-    padding: 0.5em;
+    padding: 1em;
     h1 {
       font-family: "Quicksand";
       font-size: 1.5rem;
@@ -36,21 +30,25 @@
       input[type="email"],
       input[type="text"],
       input[type="password"] {
-        width: 90%;
-        border: 1px solid rgb(89, 80, 80);
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid rgba(233, 224, 224, 0.583);
         background-color: transparent;
-        margin: 0.5em;
         padding: 1em;
         font-family: "Gemunu";
         font-size: 1rem;
-        border-radius: 10px;
-        color: #fff;
+        color: rgb(255, 255, 255);
+        margin-top: 1em;
+        &::placeholder {
+          color: rgba(255, 255, 255, 0.659);
+        }
         &:focus {
-          outline: 1px solid #0074d9;
+          outline: 1px solid #3c96c0;
         }
       }
       &.two {
         @include mix.displayHorizontal;
+        gap: 0.5em;
       }
       .input-checkbox {
         position: relative;
@@ -58,7 +56,7 @@
         align-items: center;
         color: #fff;
         font-family: "Quicksand";
-        margin-top: 10px;
+        margin-top: 1em;
         margin-bottom: 10px;
         input,
         .input-checkbox_box {
@@ -67,12 +65,13 @@
           width: 20px;
           height: 20px;
           outline: 1px solid transparent;
+          border-radius: 30px;
         }
         input {
           cursor: pointer;
           opacity: 0;
           &:checked ~ label .input-checkbox_box {
-            background-color: #1c8df0;
+            background-color: #000000;
           }
           &:active ~ label {
             top: 1px;

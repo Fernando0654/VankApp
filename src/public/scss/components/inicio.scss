@@ -5,7 +5,7 @@
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
-  min-height: 90vh;
+  min-height: 100vh;
   .panel-header {
     @include mix.displayHorizontal;
     width: 95%;
@@ -29,16 +29,19 @@
     grid-template-rows: repeat(2);
     gap: 1.5em;
     .panel-box {
-      background-color: #fff;
+      background-color: #1a4d79;
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9);
       padding: 1em;
+      border-left: 10px solid rgb(255, 255, 255);
       h2 {
         width: 100%;
-        margin: 0;
         text-align: center;
         font-family: "Quicksand";
         font-size: 1.2rem;
-        border-bottom: 1px solid rgba(196, 183, 183, 0.734);
+        margin: 0;
+        padding-bottom: 0.5em;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.604);
+        color: #fff
       }
       .box-body {
         @include mix.displayHorizontal;
@@ -46,6 +49,7 @@
           text-align: center;
           font-size: 3.5rem;
           width: 40%;
+          color: rgb(233, 224, 224);
         }
         p {
           width: 60%;
@@ -53,6 +57,7 @@
           font-family: "Quicksand";
           font-weight: lighter;
           padding-bottom: 1em;
+          color: #fff
         }
       }
       .box-btn {
@@ -64,14 +69,14 @@
               font-family: "Quicksand";
               font-weight: bold;
               padding: 1em;
-              border: 1px solid #0074d9;
-              color: #0074d9;
+              border: 1px solid #ffffff;
+              color: #ffffff;
               border-radius: 0px;
               background-color: transparent;
               cursor: pointer;
               &:hover {
-                  border: 1px solid purple;
-                  color: purple;
+                  border: 1px solid rgb(216, 173, 216);
+                  color: rgb(209, 139, 209);
               }
           }
       }
@@ -79,22 +84,18 @@
     .movimientos {
       grid-column: 1/2;
       grid-row: 1/2;
-      border-left: 10px solid rgb(255, 0, 0);
     }
     .transacciones {
       grid-column: 2/2;
       grid-row: 1/2;
-      border-left: 10px solid #9dd664;
     }
     .cartera {
       grid-column: 1/2;
       grid-row: 2/2;
-      border-left: 10px solid #3556ca;
     }
     .configuracion {
       grid-column: 2/2;
       grid-row: 2/2;
-      border-left: 10px solid #000000;
     }
   }
 }

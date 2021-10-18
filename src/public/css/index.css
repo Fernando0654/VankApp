@@ -81,7 +81,8 @@ header {
   align-items: center;
   justify-content: center;
   width: 100%;
-  background-color: black;
+  background-color: #153b6d;
+  box-shadow: 0px 0px 5px gray;
 }
 header .logo-img {
   width: 50%;
@@ -127,6 +128,12 @@ main .login-wrapper {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  min-height: 100vh;
+  background-color: #ffffff;
+  background: url(../assets/img/bg-pattern-bottom.svg);
+  background-repeat: no-repeat;
+  background-size: 40%;
+  background-position: left;
   gap: 1em;
 }
 main .login-wrapper .expo-info {
@@ -166,7 +173,8 @@ main .login-wrapper .login {
 }
 main .login-wrapper .login form {
   width: 60%;
-  background-color: #271d1d;
+  min-height: 60vh;
+  background-color: #082946;
   box-shadow: 0px 0px 10px black;
   border-radius: 30px;
 }
@@ -194,10 +202,11 @@ main .login-wrapper .login form .input-box input[type=text],
 main .login-wrapper .login form .input-box input[type=password] {
   width: 80%;
   margin: 1em;
+  margin-bottom: 1.5em;
   padding: 1em;
+  border: none;
+  border-bottom: 1px solid rgba(233, 224, 224, 0.583);
   background-color: transparent;
-  border: 1px solid #857777;
-  border-radius: 10px;
   color: #fff;
   font-family: "Gemunu";
   font-style: 1rem;
@@ -209,7 +218,7 @@ main .login-wrapper .login form .input-box input[type=password]:focus {
 main .login-wrapper .login form .input-box .forgot {
   font-size: 0.8rem;
   color: #e7cece;
-  font-family: "Geo";
+  font-family: "Quicksand";
 }
 main .login-wrapper .login form .btn-group {
   display: flex;
@@ -226,7 +235,7 @@ main .login-wrapper .login form .btn-group button {
   border: none;
   padding: 1em;
   border-radius: 30px;
-  font-weight: bold;
+  font-weight: 500;
   cursor: pointer;
 }
 main .login-wrapper .login form .btn-group button:nth-child(1) {
@@ -234,8 +243,9 @@ main .login-wrapper .login form .btn-group button:nth-child(1) {
   color: #000;
 }
 main .login-wrapper .login form .btn-group button:nth-child(2) {
-  background-color: #3556ca;
+  background-color: transparent;
   color: #fff;
+  border: 1px solid #fff;
 }
 main .login-wrapper .login form button {
   display: block;
@@ -256,7 +266,7 @@ main .login-wrapper .login form button {
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
-  min-height: 90vh;
+  min-height: 100vh;
 }
 .panel-user .panel-header {
   display: flex;
@@ -285,17 +295,20 @@ main .login-wrapper .login form button {
   gap: 1.5em;
 }
 .panel-user .panel-action .panel-box {
-  background-color: #fff;
+  background-color: #1a4d79;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9);
   padding: 1em;
+  border-left: 10px solid white;
 }
 .panel-user .panel-action .panel-box h2 {
   width: 100%;
-  margin: 0;
   text-align: center;
   font-family: "Quicksand";
   font-size: 1.2rem;
-  border-bottom: 1px solid rgba(196, 183, 183, 0.734);
+  margin: 0;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.604);
+  color: #fff;
 }
 .panel-user .panel-action .panel-box .box-body {
   display: flex;
@@ -307,6 +320,7 @@ main .login-wrapper .login form button {
   text-align: center;
   font-size: 3.5rem;
   width: 40%;
+  color: #e9e0e0;
 }
 .panel-user .panel-action .panel-box .box-body p {
   width: 60%;
@@ -314,6 +328,7 @@ main .login-wrapper .login form button {
   font-family: "Quicksand";
   font-weight: lighter;
   padding-bottom: 1em;
+  color: #fff;
 }
 .panel-user .panel-action .panel-box .box-btn {
   display: flex;
@@ -328,35 +343,31 @@ main .login-wrapper .login form button {
   font-family: "Quicksand";
   font-weight: bold;
   padding: 1em;
-  border: 1px solid #0074d9;
-  color: #0074d9;
+  border: 1px solid #ffffff;
+  color: #ffffff;
   border-radius: 0px;
   background-color: transparent;
   cursor: pointer;
 }
 .panel-user .panel-action .panel-box .box-btn button:hover {
-  border: 1px solid purple;
-  color: purple;
+  border: 1px solid #d8add8;
+  color: #d18bd1;
 }
 .panel-user .panel-action .movimientos {
   grid-column: 1/2;
   grid-row: 1/2;
-  border-left: 10px solid red;
 }
 .panel-user .panel-action .transacciones {
   grid-column: 2/2;
   grid-row: 1/2;
-  border-left: 10px solid #9dd664;
 }
 .panel-user .panel-action .cartera {
   grid-column: 1/2;
   grid-row: 2/2;
-  border-left: 10px solid #3556ca;
 }
 .panel-user .panel-action .configuracion {
   grid-column: 2/2;
   grid-row: 2/2;
-  border-left: 10px solid #000000;
 }
 
 .movimientos-wrapper {
@@ -417,6 +428,8 @@ main .login-wrapper .login form button {
   font-weight: lighter;
   text-align: center;
   margin: 0.5em;
+  background-color: #215079;
+  color: #fff;
 }
 .movimientos-wrapper .sidebar-body .sidebar-box h2 span {
   font-weight: bold;
@@ -719,9 +732,10 @@ main .login-wrapper .login form button {
 }
 
 .signup-wrapper {
-  background-image: url("../assets/img/bg_user_panel.jpg");
-  background-position: center;
-  background-size: cover;
+  background: url(../assets/img/bg-pattern-bottom.svg);
+  background-repeat: repeat;
+  background-size: 50%;
+  background-position: left;
   min-height: 100vh;
 }
 .signup-wrapper form {
@@ -731,10 +745,10 @@ main .login-wrapper .login form button {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  background-color: #271d1d;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.397);
+  background-color: #082946;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
   border-radius: 10px;
-  padding: 0.5em;
+  padding: 1em;
 }
 .signup-wrapper form h1 {
   font-family: "Quicksand";
@@ -751,26 +765,32 @@ main .login-wrapper .login form button {
 .signup-wrapper form .input-group input[type=email],
 .signup-wrapper form .input-group input[type=text],
 .signup-wrapper form .input-group input[type=password] {
-  width: 90%;
-  border: 1px solid #595050;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid rgba(233, 224, 224, 0.583);
   background-color: transparent;
-  margin: 0.5em;
   padding: 1em;
   font-family: "Gemunu";
   font-size: 1rem;
-  border-radius: 10px;
-  color: #fff;
+  color: white;
+  margin-top: 1em;
+}
+.signup-wrapper form .input-group input[type=email]::placeholder,
+.signup-wrapper form .input-group input[type=text]::placeholder,
+.signup-wrapper form .input-group input[type=password]::placeholder {
+  color: rgba(255, 255, 255, 0.659);
 }
 .signup-wrapper form .input-group input[type=email]:focus,
 .signup-wrapper form .input-group input[type=text]:focus,
 .signup-wrapper form .input-group input[type=password]:focus {
-  outline: 1px solid #0074d9;
+  outline: 1px solid #3c96c0;
 }
 .signup-wrapper form .input-group.two {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  gap: 0.5em;
 }
 .signup-wrapper form .input-group .input-checkbox {
   position: relative;
@@ -778,7 +798,7 @@ main .login-wrapper .login form button {
   align-items: center;
   color: #fff;
   font-family: "Quicksand";
-  margin-top: 10px;
+  margin-top: 1em;
   margin-bottom: 10px;
 }
 .signup-wrapper form .input-group .input-checkbox input,
@@ -788,13 +808,14 @@ main .login-wrapper .login form button {
   width: 20px;
   height: 20px;
   outline: 1px solid transparent;
+  border-radius: 30px;
 }
 .signup-wrapper form .input-group .input-checkbox input {
   cursor: pointer;
   opacity: 0;
 }
 .signup-wrapper form .input-group .input-checkbox input:checked ~ label .input-checkbox_box {
-  background-color: #1c8df0;
+  background-color: #000000;
 }
 .signup-wrapper form .input-group .input-checkbox input:active ~ label {
   top: 1px;

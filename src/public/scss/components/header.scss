@@ -5,7 +5,8 @@
 header {
   @include mix.displayHorizontal;
   width: 100%;
-  background-color: black;
+  background-color: rgb(21, 59, 109);
+  box-shadow: 0px 0px 5px gray;
   .logo-img {
     width: 50%;
     margin-left: 2em;
