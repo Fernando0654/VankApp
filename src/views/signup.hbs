@@ -1,0 +1,39 @@
+<style>
+    header {
+        display: none;
+    }
+</style>
+
+<div class="signup-wrapper">
+  <form action="/signup" method="post">
+    <h1>Registro</h1>
+    <div class="input-group">
+      <input type="email" name="email" placeholder="Correo electrónico" value="{{email}}" />
+      <input type="text" name="name" placeholder="Nombre completo" value="{{name}}" />
+      <input type="password" name="password" placeholder="Contraseña" value="{{password}}" />
+      <input
+        type="password"
+        name="password_repeated"
+        placeholder="Repetir contraseña"
+        value="{{password_repeated}}"
+      />
+    </div>
+    <div class="input-group two">
+      <input type="text" name="age" placeholder="Edad" value="{{age}}" />
+      <input type="text" name="phone" placeholder="Número de celular" value="{{phone}}" />
+    </div>
+    <div class="input-group">
+      <div class="input-checkbox">
+        <input id="input-checkbox-example" type="checkbox" />
+        <label for="input-checkbox-example">
+          <span class="input-checkbox_box" aria-hidden="true"></span>
+          <span class="input-checkbox_content">Acepto términos y condiciones</span>
+        </label>
+      </div>
+    </div>
+    <div class="btn-group">
+      <a href="#">¿Ya tienes una cuenta? Da click aquí</a>
+      <button type="submit">Registrarme</button>
+    </div>
+  </form>
+</div>

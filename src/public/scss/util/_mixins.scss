@@ -1,0 +1,13 @@
+@mixin displayHorizontal() {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin displayVertical() {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

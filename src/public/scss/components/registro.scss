@@ -1,0 +1,161 @@
+@use "../util/colors" as colors;
+@use "../util/mixins" as mix;
+
+// :root {
+//     --primary-color: #4c3288;
+//     --neutral-color: #dcdce8;
+//     --background-light: #dfe0eb;
+//     --background-dark: #ffffff;
+//     --box-size: 20px;
+// }
+
+.signup-wrapper {
+  background-image: url("../assets/img/bg_user_panel.jpg");
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  form {
+    width: 90%;
+    max-width: 400px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: colors.$black_soft;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.397);
+    border-radius: 10px;
+    padding: 0.5em;
+    h1 {
+      font-family: "Quicksand";
+      font-size: 1.5rem;
+      text-align: center;
+      color: #fff;
+    }
+    .input-group {
+      @include mix.displayVertical;
+      input[type="email"],
+      input[type="text"],
+      input[type="password"] {
+        width: 90%;
+        border: 1px solid rgb(89, 80, 80);
+        background-color: transparent;
+        margin: 0.5em;
+        padding: 1em;
+        font-family: "Gemunu";
+        font-size: 1rem;
+        border-radius: 10px;
+        color: #fff;
+        &:focus {
+          outline: 1px solid #0074d9;
+        }
+      }
+      &.two {
+        @include mix.displayHorizontal;
+      }
+      .input-checkbox {
+        position: relative;
+        display: block;
+        align-items: center;
+        color: #fff;
+        font-family: "Quicksand";
+        margin-top: 10px;
+        margin-bottom: 10px;
+        input,
+        .input-checkbox_box {
+          position: absolute;
+          top: calc(50% - (20px / 2));
+          width: 20px;
+          height: 20px;
+          outline: 1px solid transparent;
+        }
+        input {
+          cursor: pointer;
+          opacity: 0;
+          &:checked ~ label .input-checkbox_box {
+            background-color: #1c8df0;
+          }
+          &:active ~ label {
+            top: 1px;
+          }
+          &:not(:disabled) {
+            &:focus ~ label .input-checkbox_box,
+            &:hover ~ label .input-checkbox_box {
+              outline: 1px solid #1c8df0;
+            }
+          }
+          &:disabled {
+            ~ label {
+              color: #0074d9;
+              cursor: not-allowed;
+              .input-checkbox_box {
+                border: 2px solid #0074d9;
+              }
+            }
+            &:checked ~ label .input-checkbox_box {
+              background-color: #0074d9;
+            }
+          }
+        }
+        label {
+          position: relative;
+          display: flex;
+          padding-top: 3px;
+          font-size: 16px;
+          cursor: pointer;
+          transition: all 0.2s ease-in-out;
+        }
+        .input-checkbox_box {
+          margin-right: 12px;
+          pointer-events: none;
+          border: 2px solid #1c8df0;
+          transition: all 0.2s ease-in-out;
+          &::after {
+            position: relative;
+            top: 2px;
+            left: 4px;
+            display: inline-block;
+            width: 16px;
+            height: 13px;
+            content: "";
+            background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><g fill='none' fill-rule='evenodd'><path d='M0 0h20v20H0z'/><path fill='%23ffffff' d='M1 10.243L7.321 17 19 4.763 17.156 3 7.321 13.346l-4.477-4.76z'/></g></svg>");
+            background-repeat: no-repeat;
+          }
+        }
+        .input-checkbox_content {
+          margin-left: calc(20px + 12px);
+        }
+        + .input-checkbox {
+          margin-top: 2rem;
+        }
+      }
+    }
+    .btn-group {
+      a {
+        display: block;
+        width: 100%;
+        font-family: "Gemunu";
+        font-size: 1rem;
+        text-align: center;
+        color: #0074d9;
+        &:hover {
+          color: gray;
+        }
+      }
+      button {
+        display: block;
+        margin: auto;
+        padding: 1em;
+        font-family: "Quicksand";
+        background-color: #0074d9;
+        color: #fff;
+        border: 0px;
+        margin-top: 1em;
+        border-radius: 10px;
+        cursor: pointer;
+        &:hover {
+          color: #b4d1eb;
+        }
+      }
+    }
+  }
+}

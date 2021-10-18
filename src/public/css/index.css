@@ -1,0 +1,873 @@
+@charset "UTF-8";
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 24px;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  display: block;
+}
+
+/* Ponemos un color de fondo y redondeamos las esquinas del thumb */
+body::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+body::-webkit-scrollbar-thumb:hover {
+  background: #b3b3b3;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Cambiamos el fondo cuando esté en active */
+body::-webkit-scrollbar-thumb:active {
+  background-color: #999999;
+}
+
+/* Ponemos un color de fondo y redondeamos las esquinas del track */
+body::-webkit-scrollbar-track {
+  background: #e1e1e1;
+  border-radius: 4px;
+}
+
+/* Cambiamos el fondo cuando esté en active o hover */
+body::-webkit-scrollbar-track:hover,
+body::-webkit-scrollbar-track:active {
+  background: #d4d4d4;
+}
+
+ol, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.change-lang {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 12%;
+  color: black;
+  font-family: "Quicksand";
+  font-size: 1.2vw;
+  border: 1px solid #222020;
+}
+.change-lang span {
+  padding: 0.5em;
+}
+
+@font-face {
+  font-family: "Geo";
+  src: url("../assets/fonts/geo.ttf");
+}
+@font-face {
+  font-family: "Quicksand";
+  src: url("../assets/fonts/quicksand.ttf");
+}
+@font-face {
+  font-family: "Gemunu";
+  src: url("../assets/fonts/gemunu.ttf");
+}
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: black;
+}
+header .logo-img {
+  width: 50%;
+  margin-left: 2em;
+}
+header .logo-img h1 {
+  font-family: "Geo";
+  color: #ffffff;
+  font-size: 3rem;
+  margin: 0;
+  font-weight: lighter;
+}
+header .logo-img h1 span {
+  font-family: "Quicksand", sans-serif;
+  color: #e7cece;
+  font-size: 1rem;
+}
+header .nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 45%;
+  justify-content: end;
+  margin-right: 2em;
+}
+header .nav li a {
+  display: block;
+  font-size: 1rem;
+  padding: 1em;
+  color: #fff;
+  font-family: "Quicksand", cursive;
+}
+header .nav li a:hover {
+  color: #8bb9e1;
+}
+
+main {
+  width: 100%;
+}
+main .login-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+main .login-wrapper .expo-info {
+  width: 50%;
+  max-width: 500px;
+}
+main .login-wrapper .expo-info h1 {
+  font-family: "Gemunu", cursive;
+  color: #143153;
+  font-weight: 600;
+}
+main .login-wrapper .expo-info p {
+  font-family: "Quicksand";
+  font-weight: bold;
+}
+main .login-wrapper .expo-info button {
+  display: block;
+  padding: 0.5em;
+  width: 40%;
+  font-family: "Gemunu";
+  font-size: 1.5rem;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  background-color: #3556ca;
+  cursor: pointer;
+}
+main .login-wrapper .expo-info button:hover {
+  background-color: blue;
+}
+main .login-wrapper .login {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  max-width: 700px;
+  margin-top: 0.5em;
+}
+main .login-wrapper .login form {
+  width: 60%;
+  background-color: #271d1d;
+  box-shadow: 0px 0px 10px black;
+  border-radius: 30px;
+}
+main .login-wrapper .login form img {
+  width: 100%;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  filter: blur(1px);
+}
+main .login-wrapper .login form h2 {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.5rem;
+}
+main .login-wrapper .login form .input-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+main .login-wrapper .login form .input-box input[type=text],
+main .login-wrapper .login form .input-box input[type=password] {
+  width: 80%;
+  margin: 1em;
+  padding: 1em;
+  background-color: transparent;
+  border: 1px solid #857777;
+  border-radius: 10px;
+  color: #fff;
+  font-family: "Gemunu";
+  font-style: 1rem;
+}
+main .login-wrapper .login form .input-box input[type=text]:focus,
+main .login-wrapper .login form .input-box input[type=password]:focus {
+  outline: 1px solid #0074d9;
+}
+main .login-wrapper .login form .input-box .forgot {
+  font-size: 0.8rem;
+  color: #e7cece;
+  font-family: "Geo";
+}
+main .login-wrapper .login form .btn-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 1em;
+}
+main .login-wrapper .login form .btn-group button {
+  width: 35%;
+  margin: 1em;
+  font-family: "Quicksand", sans-serif;
+  border: none;
+  padding: 1em;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+main .login-wrapper .login form .btn-group button:nth-child(1) {
+  background-color: #fff;
+  color: #000;
+}
+main .login-wrapper .login form .btn-group button:nth-child(2) {
+  background-color: #3556ca;
+  color: #fff;
+}
+main .login-wrapper .login form button {
+  display: block;
+  padding: 1em;
+  font-family: "Quicksand", sans-serif;
+  background-color: #fff;
+  color: #000;
+  border-radius: 30px;
+  border: none;
+  margin: auto;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.panel-user {
+  background-image: url(../assets/img/bg_user_panel.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 90vh;
+}
+.panel-user .panel-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 95%;
+  max-width: 1000px;
+  margin: auto;
+}
+.panel-user .panel-header h1 {
+  width: 85%;
+  text-align: left;
+  font-family: "Quicksand";
+  font-size: 1.7rem;
+  font-weight: lighter;
+  color: black;
+}
+.panel-user .panel-action {
+  width: 95%;
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2);
+  grid-template-rows: repeat(2);
+  gap: 1.5em;
+}
+.panel-user .panel-action .panel-box {
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9);
+  padding: 1em;
+}
+.panel-user .panel-action .panel-box h2 {
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  font-family: "Quicksand";
+  font-size: 1.2rem;
+  border-bottom: 1px solid rgba(196, 183, 183, 0.734);
+}
+.panel-user .panel-action .panel-box .box-body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.panel-user .panel-action .panel-box .box-body .icon {
+  text-align: center;
+  font-size: 3.5rem;
+  width: 40%;
+}
+.panel-user .panel-action .panel-box .box-body p {
+  width: 60%;
+  font-size: 1rem;
+  font-family: "Quicksand";
+  font-weight: lighter;
+  padding-bottom: 1em;
+}
+.panel-user .panel-action .panel-box .box-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  justify-content: end;
+  gap: 1em;
+  width: 100%;
+}
+.panel-user .panel-action .panel-box .box-btn button {
+  font-family: "Quicksand";
+  font-weight: bold;
+  padding: 1em;
+  border: 1px solid #0074d9;
+  color: #0074d9;
+  border-radius: 0px;
+  background-color: transparent;
+  cursor: pointer;
+}
+.panel-user .panel-action .panel-box .box-btn button:hover {
+  border: 1px solid purple;
+  color: purple;
+}
+.panel-user .panel-action .movimientos {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  border-left: 10px solid red;
+}
+.panel-user .panel-action .transacciones {
+  grid-column: 2/2;
+  grid-row: 1/2;
+  border-left: 10px solid #9dd664;
+}
+.panel-user .panel-action .cartera {
+  grid-column: 1/2;
+  grid-row: 2/2;
+  border-left: 10px solid #3556ca;
+}
+.panel-user .panel-action .configuracion {
+  grid-column: 2/2;
+  grid-row: 2/2;
+  border-left: 10px solid #000000;
+}
+
+.movimientos-wrapper {
+  width: 95%;
+  max-width: 1000px;
+  margin: auto;
+}
+.movimientos-wrapper .component-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.movimientos-wrapper .component-header .component-route {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.movimientos-wrapper .component-header .component-route h1 {
+  width: 100%;
+  font-family: "Quicksand", sans-serif;
+  font-size: 2rem;
+  padding: 0.2em;
+}
+.movimientos-wrapper .component-header .component-route h1 a {
+  font-size: 1rem;
+  font-weight: lighter;
+}
+.movimientos-wrapper .component-header .component-route.movimientos-route {
+  width: 85%;
+}
+.movimientos-wrapper .component-header .component-route.movimientos-route h1 {
+  border-left: 7px solid red;
+}
+.movimientos-wrapper .component-header .change-lang {
+  width: 12%;
+  color: #000;
+}
+.movimientos-wrapper .sidebar-body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  align-items: flex-start;
+}
+.movimientos-wrapper .sidebar-body .sidebar-box {
+  width: 30%;
+}
+.movimientos-wrapper .sidebar-body .sidebar-box h2 {
+  width: 100%;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border: 1px solid rgba(189, 178, 178, 0.522);
+  font-size: 1.2rem;
+  font-family: "Quicksand";
+  font-weight: lighter;
+  text-align: center;
+  margin: 0.5em;
+}
+.movimientos-wrapper .sidebar-body .sidebar-box h2 span {
+  font-weight: bold;
+}
+.movimientos-wrapper .sidebar-body .sidebar-box > span {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0.5em;
+  font-family: "Quicksand";
+  font-size: 1rem;
+  font-weight: bold;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  box-shadow: 0px 0px 10px rgba(58, 55, 55, 0.1);
+}
+.movimientos-wrapper .sidebar-body .sidebar-box > span .filtros {
+  width: 70%;
+  border: none;
+  font-family: "Quicksand";
+  outline: none;
+}
+.movimientos-wrapper .sidebar-body .sidebar-box .help h2 {
+  border: none;
+  font-size: 1rem;
+}
+.movimientos-wrapper .sidebar-body .sidebar-box .help p {
+  width: 100%;
+  margin: 1em;
+  font-size: 1rem;
+  color: gray;
+  font-family: "Quicksand";
+}
+.movimientos-wrapper .sidebar-body .sidebar-box .help a {
+  width: 100%;
+  margin: 1em;
+  font-size: 1rem;
+  font-family: "Quicksand";
+  text-decoration: underline;
+}
+.movimientos-wrapper .sidebar-body:nth-child(1) {
+  width: 30%;
+}
+.movimientos-wrapper .sidebar-body:nth-child(2) {
+  width: auto;
+}
+.movimientos-wrapper .sidebar-body.tabla table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin-top: 0.5em;
+  font-size: 1rem;
+  font-family: "Quicksand";
+}
+.movimientos-wrapper .sidebar-body.tabla table thead {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.296);
+}
+.movimientos-wrapper .sidebar-body.tabla table tbody {
+  border: 1px solid #e2dbdb;
+  font-size: 0.8rem;
+}
+.movimientos-wrapper .sidebar-body.tabla table tbody tr {
+  text-align: center;
+}
+.movimientos-wrapper .sidebar-body.tabla table tbody tr td:nth-child(1) {
+  width: 30%;
+}
+.movimientos-wrapper .sidebar-body.tabla table tbody tr td:nth-child(7) button {
+  padding: 0.5em;
+  margin: 0.1em;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+.movimientos-wrapper .sidebar-body.tabla table tbody tr td:nth-child(7) button:nth-child(1) {
+  color: #0074d9;
+}
+.movimientos-wrapper .sidebar-body.tabla table tbody tr td:nth-child(7) button:nth-child(2) {
+  color: red;
+}
+.movimientos-wrapper .sidebar-body.tabla table tbody tr td:nth-child(7) button:hover {
+  text-decoration: underline;
+}
+.movimientos-wrapper .sidebar-body.tabla table th,
+.movimientos-wrapper .sidebar-body.tabla table td {
+  padding: 1em;
+}
+.movimientos-wrapper .sidebar-body .movimientos-box:nth-child(1) {
+  width: 30%;
+}
+.movimientos-wrapper .sidebar-body .movimientos-box:nth-child(2) {
+  width: 70%;
+}
+.movimientos-wrapper .sidebar-body .movimientos-box.tabla table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin-top: 0.5em;
+  font-size: 1rem;
+  font-family: "Quicksand";
+}
+.movimientos-wrapper .sidebar-body .movimientos-box.tabla table thead {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.296);
+}
+.movimientos-wrapper .sidebar-body .movimientos-box.tabla table tbody {
+  border: 1px solid #e2dbdb;
+  font-size: 0.8rem;
+}
+.movimientos-wrapper .sidebar-body .movimientos-box.tabla table tbody tr {
+  text-align: center;
+}
+.movimientos-wrapper .sidebar-body .movimientos-box.tabla table tbody tr td:nth-child(1) {
+  width: 30%;
+}
+.movimientos-wrapper .sidebar-body .movimientos-box.tabla table tbody tr td:nth-child(7) button {
+  padding: 0.5em;
+  margin: 0.1em;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+.movimientos-wrapper .sidebar-body .movimientos-box.tabla table tbody tr td:nth-child(7) button:nth-child(1) {
+  color: #0074d9;
+}
+.movimientos-wrapper .sidebar-body .movimientos-box.tabla table tbody tr td:nth-child(7) button:nth-child(2) {
+  color: red;
+}
+.movimientos-wrapper .sidebar-body .movimientos-box.tabla table tbody tr td:nth-child(7) button:hover {
+  text-decoration: underline;
+}
+.movimientos-wrapper .sidebar-body .movimientos-box.tabla table th,
+.movimientos-wrapper .sidebar-body .movimientos-box.tabla table td {
+  padding: 1em;
+}
+
+.transacciones-wrapper .component-header .component-route.transacciones-route {
+  width: 85%;
+}
+.transacciones-wrapper .component-header .component-route.transacciones-route h1 {
+  border-left: 7px solid #9DD664;
+}
+.transacciones-wrapper .card-input {
+  display: block;
+  width: 100%;
+  background-color: lavender;
+}
+.transacciones-wrapper .card-input:nth-child(2) {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+.transacciones-wrapper .card-input .card-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-family: "Quicksand";
+  background-color: #fff;
+  box-shadow: 0px -2px 5px rgba(38, 36, 36, 0.35);
+  cursor: pointer;
+}
+.transacciones-wrapper .card-input .card-header h1 {
+  width: 75%;
+  font-size: 1.5rem;
+  text-align: left;
+}
+.transacciones-wrapper .card-input .card-header .fa-chevron-down {
+  text-align: right;
+  width: 20%;
+}
+.transacciones-wrapper .card-input .card-body {
+  border: 1px solid rgba(153, 131, 131, 0.282);
+  padding: 1em;
+}
+.transacciones-wrapper .card-input .card-body p {
+  width: 100%;
+  margin: auto;
+  font-size: 1rem;
+  font-family: "Quicksand";
+  color: #494141;
+}
+.transacciones-wrapper .card-input .card-body .input-group {
+  width: 100%;
+}
+.transacciones-wrapper .card-input .card-body .input-group input[type=text],
+.transacciones-wrapper .card-input .card-body .input-group input[type=email],
+.transacciones-wrapper .card-input .card-body .input-group input[type=submit] {
+  padding: 1em;
+  border: 1px solid rgba(153, 131, 131, 0.282);
+  margin: 1em;
+  margin-left: 0;
+  outline: none;
+  font-family: "Quicksand";
+  font-weight: lighter;
+}
+.transacciones-wrapper .card-input .card-body .input-group input[type=text]:focus,
+.transacciones-wrapper .card-input .card-body .input-group input[type=email]:focus,
+.transacciones-wrapper .card-input .card-body .input-group input[type=submit]:focus {
+  border: 1px solid #0074d9;
+}
+.transacciones-wrapper .card-input .card-body .input-group input[type=email] {
+  width: 90%;
+  margin: auto;
+  margin-top: 1em;
+}
+.transacciones-wrapper .card-input .card-body .input-group input[type=submit] {
+  background-color: #3556ca;
+  color: #fff;
+  cursor: pointer;
+}
+.transacciones-wrapper .card-input .card-body .input-group input[type=submit]:hover {
+  background-color: #0074d9;
+}
+
+.cartera-wrapper .component-header .component-route.cartera-route {
+  width: 85%;
+}
+.cartera-wrapper .component-header .component-route.cartera-route h1 {
+  border-left: 7px solid #6498D6;
+}
+
+.cartera-wrapper .card-user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  padding: 1em;
+  margin-top: 0.5em;
+  background-color: #f2f2f7;
+  border: 1px solid rgba(213, 201, 201, 0.555);
+}
+.cartera-wrapper .card-user .fa-user-circle {
+  width: 30%;
+  font-size: 8rem;
+}
+.cartera-wrapper .card-user .user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-items: start;
+  font-family: "Quicksand";
+  width: 100%;
+}
+.cartera-wrapper .card-user .user-info h3 {
+  font-size: 1rem;
+  margin: 0.5em;
+  font-weight: 600;
+}
+.cartera-wrapper .card-user .user-info h3 span {
+  font-size: 1rem;
+  padding: 0.4em;
+  font-weight: lighter;
+}
+.cartera-wrapper .card-user .user-info .user-actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.cartera-wrapper .card-user .user-info .user-actions .fa-wrench {
+  width: 50%;
+  padding: 0.5em;
+  font-size: 0.8rem;
+  color: #0074d9;
+  cursor: pointer;
+}
+.cartera-wrapper .card-user .user-info .user-actions .fa-wrench span {
+  font-family: "Quicksand";
+  padding-left: 0.5em;
+}
+.cartera-wrapper .card-user .user-info .user-actions a {
+  width: 50%;
+  text-align: right;
+  font-size: 0.8rem;
+  color: red;
+  font-weight: bold;
+}
+.cartera-wrapper .user-cards {
+  width: 90%;
+  font-family: "Quicksand";
+}
+.cartera-wrapper .user-cards h2 {
+  font-size: 1.2rem;
+  margin: 0.5em;
+  margin-left: 0;
+}
+.cartera-wrapper .user-cards span {
+  display: inline-block;
+  padding: 1em;
+  border: 1px solid rgba(192, 183, 183, 0.726);
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.cartera-wrapper .user-cards span .fa-cc-mastercard,
+.cartera-wrapper .user-cards span .fa-cc-visa {
+  color: #0074d9;
+}
+
+.signup-wrapper {
+  background-image: url("../assets/img/bg_user_panel.jpg");
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+}
+.signup-wrapper form {
+  width: 90%;
+  max-width: 400px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #271d1d;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.397);
+  border-radius: 10px;
+  padding: 0.5em;
+}
+.signup-wrapper form h1 {
+  font-family: "Quicksand";
+  font-size: 1.5rem;
+  text-align: center;
+  color: #fff;
+}
+.signup-wrapper form .input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.signup-wrapper form .input-group input[type=email],
+.signup-wrapper form .input-group input[type=text],
+.signup-wrapper form .input-group input[type=password] {
+  width: 90%;
+  border: 1px solid #595050;
+  background-color: transparent;
+  margin: 0.5em;
+  padding: 1em;
+  font-family: "Gemunu";
+  font-size: 1rem;
+  border-radius: 10px;
+  color: #fff;
+}
+.signup-wrapper form .input-group input[type=email]:focus,
+.signup-wrapper form .input-group input[type=text]:focus,
+.signup-wrapper form .input-group input[type=password]:focus {
+  outline: 1px solid #0074d9;
+}
+.signup-wrapper form .input-group.two {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.signup-wrapper form .input-group .input-checkbox {
+  position: relative;
+  display: block;
+  align-items: center;
+  color: #fff;
+  font-family: "Quicksand";
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.signup-wrapper form .input-group .input-checkbox input,
+.signup-wrapper form .input-group .input-checkbox .input-checkbox_box {
+  position: absolute;
+  top: calc(50% - 10px);
+  width: 20px;
+  height: 20px;
+  outline: 1px solid transparent;
+}
+.signup-wrapper form .input-group .input-checkbox input {
+  cursor: pointer;
+  opacity: 0;
+}
+.signup-wrapper form .input-group .input-checkbox input:checked ~ label .input-checkbox_box {
+  background-color: #1c8df0;
+}
+.signup-wrapper form .input-group .input-checkbox input:active ~ label {
+  top: 1px;
+}
+.signup-wrapper form .input-group .input-checkbox input:not(:disabled):focus ~ label .input-checkbox_box, .signup-wrapper form .input-group .input-checkbox input:not(:disabled):hover ~ label .input-checkbox_box {
+  outline: 1px solid #1c8df0;
+}
+.signup-wrapper form .input-group .input-checkbox input:disabled ~ label {
+  color: #0074d9;
+  cursor: not-allowed;
+}
+.signup-wrapper form .input-group .input-checkbox input:disabled ~ label .input-checkbox_box {
+  border: 2px solid #0074d9;
+}
+.signup-wrapper form .input-group .input-checkbox input:disabled:checked ~ label .input-checkbox_box {
+  background-color: #0074d9;
+}
+.signup-wrapper form .input-group .input-checkbox label {
+  position: relative;
+  display: flex;
+  padding-top: 3px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.signup-wrapper form .input-group .input-checkbox .input-checkbox_box {
+  margin-right: 12px;
+  pointer-events: none;
+  border: 2px solid #1c8df0;
+  transition: all 0.2s ease-in-out;
+}
+.signup-wrapper form .input-group .input-checkbox .input-checkbox_box::after {
+  position: relative;
+  top: 2px;
+  left: 4px;
+  display: inline-block;
+  width: 16px;
+  height: 13px;
+  content: "";
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><g fill='none' fill-rule='evenodd'><path d='M0 0h20v20H0z'/><path fill='%23ffffff' d='M1 10.243L7.321 17 19 4.763 17.156 3 7.321 13.346l-4.477-4.76z'/></g></svg>");
+  background-repeat: no-repeat;
+}
+.signup-wrapper form .input-group .input-checkbox .input-checkbox_content {
+  margin-left: 32px;
+}
+.signup-wrapper form .input-group .input-checkbox + .input-checkbox {
+  margin-top: 2rem;
+}
+.signup-wrapper form .btn-group a {
+  display: block;
+  width: 100%;
+  font-family: "Gemunu";
+  font-size: 1rem;
+  text-align: center;
+  color: #0074d9;
+}
+.signup-wrapper form .btn-group a:hover {
+  color: gray;
+}
+.signup-wrapper form .btn-group button {
+  display: block;
+  margin: auto;
+  padding: 1em;
+  font-family: "Quicksand";
+  background-color: #0074d9;
+  color: #fff;
+  border: 0px;
+  margin-top: 1em;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.signup-wrapper form .btn-group button:hover {
+  color: #b4d1eb;
+}
+
+/*# sourceMappingURL=index.css.map */

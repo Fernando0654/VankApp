@@ -1,0 +1,204 @@
+@use "../util/mixins" as mix;
+
+.movimientos-wrapper {
+  width: 95%;
+  max-width: 1000px;
+  margin: auto;
+  .component-header {
+    @include mix.displayHorizontal;
+    .component-route {
+      @include mix.displayHorizontal;
+      h1 {
+        width: 100%;
+        font-family: "Quicksand", sans-serif;
+        font-size: 2rem;
+        padding: 0.2em;
+        a {
+          font-size: 1rem;
+          font-weight: lighter;
+        }
+      }
+      &.movimientos-route {
+        width: 85%;
+        h1 {
+          border-left: 7px solid rgb(255, 0, 0);
+        }
+      }
+    }
+    .change-lang {
+      width: 12%;
+      color: #000;
+    }
+  }
+  .sidebar-body {
+    @include mix.displayHorizontal;
+    gap: 1em;
+    align-items: flex-start;
+    .sidebar-box {
+      width: 30%;
+      h2 {
+        width: 100%;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        border: 1px solid rgba(189, 178, 178, 0.522);
+        font-size: 1.2rem;
+        font-family: "Quicksand";
+        font-weight: lighter;
+        text-align: center;
+        margin: 0.5em;
+        span {
+          font-weight: bold;
+        }
+      }
+      & > span {
+        @include mix.displayHorizontal;
+        width: 100%;
+        margin: 0.5em;
+        font-family: "Quicksand";
+        font-size: 1rem;
+        font-weight: bold;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        box-shadow: 0px 0px 10px rgba(58, 55, 55, 0.1);
+        .filtros {
+          width: 70%;
+          border: none;
+          font-family: "Quicksand";
+          outline: none;
+        }
+      }
+      .help {
+        h2 {
+          border: none;
+          font-size: 1rem;
+        }
+        p {
+          width: 100%;
+          margin: 1em;
+          font-size: 1rem;
+          color: gray;
+          font-family: "Quicksand";
+        }
+        a {
+          width: 100%;
+          margin: 1em;
+          font-size: 1rem;
+          font-family: "Quicksand";
+          text-decoration: underline;
+        }
+      }
+    }
+    &:nth-child(1) {
+      // Saldo y ayuda
+      width: 30%;
+    }
+    &:nth-child(2) {
+      width: auto;
+    }
+    &.tabla {
+      table {
+        table-layout: fixed;
+        border-collapse: collapse;
+        margin-top: 0.5em;
+        font-size: 1rem;
+        font-family: "Quicksand";
+        thead {
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.296);
+        }
+        tbody {
+          border: 1px solid rgb(226, 219, 219);
+          font-size: 0.8rem;
+          tr {
+            text-align: center;
+            td {
+              &:nth-child(1) {
+                // Fecha
+                width: 30%;
+              }
+              &:nth-child(7) {
+                // Acciones
+                button {
+                  padding: 0.5em;
+                  margin: 0.1em;
+                  cursor: pointer;
+                  background-color: transparent;
+                  border: none;
+                  &:nth-child(1) {
+                    color: #0074d9;
+                  }
+                  &:nth-child(2) {
+                    color: rgb(255, 0, 0);
+                  }
+                  &:hover {
+                    text-decoration: underline;
+                  }
+                }
+              }
+            }
+          }
+        }
+        th,
+        td {
+          padding: 1em;
+        }
+      }
+    }
+    .movimientos-box {
+      &:nth-child(1) {
+        // Saldo y ayuda
+        width: 30%;
+      }
+      &:nth-child(2) {
+        width: 70%;
+      }
+      &.tabla {
+        table {
+          table-layout: fixed;
+          border-collapse: collapse;
+          margin-top: 0.5em;
+          font-size: 1rem;
+          font-family: "Quicksand";
+          thead {
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.296);
+          }
+          tbody {
+            border: 1px solid rgb(226, 219, 219);
+            font-size: 0.8rem;
+            tr {
+              text-align: center;
+              td {
+                &:nth-child(1) {
+                  // Fecha
+                  width: 30%;
+                }
+                &:nth-child(7) {
+                  // Acciones
+                  button {
+                    padding: 0.5em;
+                    margin: 0.1em;
+                    cursor: pointer;
+                    background-color: transparent;
+                    border: none;
+                    &:nth-child(1) {
+                      color: #0074d9;
+                    }
+                    &:nth-child(2) {
+                      color: rgb(255, 0, 0);
+                    }
+                    &:hover {
+                      text-decoration: underline;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          th,
+          td {
+            padding: 1em;
+          }
+        }
+      }
+    }
+  }
+}

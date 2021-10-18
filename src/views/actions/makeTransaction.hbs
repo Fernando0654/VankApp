@@ -1,0 +1,79 @@
+<div class="movimientos-wrapper transacciones-wrapper">
+  <div class="component-header">
+    <div class="component-route transacciones-route">
+      <h1>
+        Realizar Transacción
+        <a href="#">Inicio ></a>
+        <a href="#">Transacciones</a>
+      </h1>
+    </div>
+    <div class="change-lang">
+      <i class="fa fa-language" aria-hidden="true"></i>
+      <span>Idioma: Es</span>
+    </div>
+  </div>
+  <div class="sidebar-body">
+    <div class="sidebar-box">
+      <h2>Saldo disponible: <span>20, 0000 $</span></h2>
+      <div class="help">
+        <h2>Ayuda</h2>
+        <p>
+          Si tienes dudas sobre algún movimiento, notas algo sospechoso o fuera
+          de lugar: ¡no dudes en contactarnos!
+        </p>
+        <a href="#">Centro de ayuda</a>
+      </div>
+    </div>
+    <div class="movimientos-box transacciones-box">
+      <div class="card-input">
+        <div class="card-header">
+          <h1>La manera Vank App</h1>
+          <i class="fa fa-chevron-down" aria-hidden="true"></i>
+        </div>
+        <div class="card-body">
+          <p>
+            Si conoces a alguien que use Vank App, sólo introduce su correo
+            electrónico, y esta persona recibirá el dinero al instante
+          </p>
+          <form action="/adding" method="post" class="input-group">
+            <input
+              type="email"
+              name="correo"
+              placeholder="Correo electrónico de la cuenta a la que deseas despositar"
+              autofocus
+            />
+            <div class="input-three">
+              <input type="text" name="concepto" placeholder="Concepto" />
+              <input type="text" name="cantidad" placeholder="Cantidad" />
+              <input type="submit" value="Depositar" />
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="card-input">
+        <div class="card-header">
+          <h1>La manera tradicional</h1>
+          <i class="fa fa-chevron-down" aria-hidden="true"></i>
+        </div>
+        <div class="card-body">
+          <p>
+            Si conoces a alguien que use Vank App, sólo introduce su correo
+            electrónico, y esta persona recibirá el dinero al instante
+          </p>
+          <form class="input-group">
+            <div class="input-three">
+              <input type="text" placeholder="Clabe" />
+              <input type="text" placeholder="Cantidad" />
+              <input type="text" placeholder="Concepto" />
+            </div>
+            <div class="input-three">
+              <input type="text" placeholder="Nombre del titular" />
+              <input type="text" placeholder="Nombre del banco" />
+              <input type="submit" value="Depositar" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

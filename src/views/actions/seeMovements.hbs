@@ -1,0 +1,85 @@
+<div class="movimientos-wrapper">
+  <div class="component-header">
+    <div class="component-route movimientos-route">
+      <h1>
+        MOVIMIENTOS
+        <a href="/panel">Inicio ></a>
+        <a href="#">Movimientos</a>
+      </h1>
+    </div>
+    <div class="change-lang">
+      <i class="fa fa-language" aria-hidden="true"></i>
+      <span>Idioma: Es</span>
+    </div>
+  </div>
+  <div class="sidebar-body">
+    <div class="sidebar-box">
+      <h2>Saldo disponible: <span>20, 0000 $</span></h2>
+      <span>Filtro: &nbsp;&nbsp;
+        <select id="filtros" class="filtros">
+          <option value="recientes">Más recientes</option>
+          <option value="antiguos">Más antiguos</option>
+          <option value="cantidadAlta">Cantidad mayor a menor</option>
+          <option value="cantidadBaja">Cantidad menor a mayor</option>
+          <option value="elegir" selected>Elegir opción</option>
+        </select>
+      </span>
+      <div class="help">
+        <h2>Ayuda</h2>
+        <p>
+          Si tienes dudas sobre algún movimiento, notas algo sospechoso o fuera
+          de lugar: ¡no dudes en contactarnos!
+        </p>
+        <a href="#">Centro de ayuda</a>
+      </div>
+    </div>
+    <div class="movimientos-box tabla">
+      <table id="historial">
+        <thead>
+          <tr>
+            <th>Fecha</th>
+            <th>Concepto</th>
+            <th>Tipo</th>
+            <th>Número</th>
+            <th>Destinatario</th>
+            <th>Cantidad</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each movimientos}}
+            <tr>
+              <td>{{fecha}}</td>
+              <td>{{concepto}}</td>
+              <td>Depósito</td>
+              <td>6846131</td>
+              <td>Nelson Mandela</td>
+              <td>{{cantidad}} $</td>
+              <td>
+                <a href="movimiento/{{_id}}">
+                  <button>
+                    <i class="fa fa-eye" aria-hidden="true"></i>
+                  </button>
+                </a>
+                <form
+                  action="/movimiento/delete/{{_id}}?_method=DELETE"
+                  method="post"
+                >
+                <input type="hidden" name="_method" value="DELETE">
+                <button type="submit">
+                  <i class="fa fa-trash-o" aria-hidden="true"></i>
+                </button>
+                </form>
+              </td>
+            </tr>
+          {{else}}
+            <div class="message">
+              <h1>No hay movimientos</h1>
+            </div>
+          {{/each}}
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+</div>

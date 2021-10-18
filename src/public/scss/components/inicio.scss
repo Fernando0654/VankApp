@@ -1,0 +1,100 @@
+@use "../util/mixins" as mix;
+
+.panel-user {
+  background-image: url(../assets/img/bg_user_panel.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 90vh;
+  .panel-header {
+    @include mix.displayHorizontal;
+    width: 95%;
+    max-width: 1000px;
+    margin: auto;
+    h1 {
+      width: 85%;
+      text-align: left;
+      font-family: "Quicksand";
+      font-size: 1.7rem;
+      font-weight: lighter;
+      color: rgb(0, 0, 0);
+    }
+  }
+  .panel-action {
+    width: 95%;
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2);
+    grid-template-rows: repeat(2);
+    gap: 1.5em;
+    .panel-box {
+      background-color: #fff;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9);
+      padding: 1em;
+      h2 {
+        width: 100%;
+        margin: 0;
+        text-align: center;
+        font-family: "Quicksand";
+        font-size: 1.2rem;
+        border-bottom: 1px solid rgba(196, 183, 183, 0.734);
+      }
+      .box-body {
+        @include mix.displayHorizontal;
+        .icon {
+          text-align: center;
+          font-size: 3.5rem;
+          width: 40%;
+        }
+        p {
+          width: 60%;
+          font-size: 1rem;
+          font-family: "Quicksand";
+          font-weight: lighter;
+          padding-bottom: 1em;
+        }
+      }
+      .box-btn {
+          @include mix.displayHorizontal;
+          justify-content: end;
+          gap: 1em;
+          width: 100%;
+          button {
+              font-family: "Quicksand";
+              font-weight: bold;
+              padding: 1em;
+              border: 1px solid #0074d9;
+              color: #0074d9;
+              border-radius: 0px;
+              background-color: transparent;
+              cursor: pointer;
+              &:hover {
+                  border: 1px solid purple;
+                  color: purple;
+              }
+          }
+      }
+    }
+    .movimientos {
+      grid-column: 1/2;
+      grid-row: 1/2;
+      border-left: 10px solid rgb(255, 0, 0);
+    }
+    .transacciones {
+      grid-column: 2/2;
+      grid-row: 1/2;
+      border-left: 10px solid #9dd664;
+    }
+    .cartera {
+      grid-column: 1/2;
+      grid-row: 2/2;
+      border-left: 10px solid #3556ca;
+    }
+    .configuracion {
+      grid-column: 2/2;
+      grid-row: 2/2;
+      border-left: 10px solid #000000;
+    }
+  }
+}

@@ -1,0 +1,124 @@
+@use "../util/mixins" as mix;
+@use "../util/colors" as colors;
+
+main {
+  width: 100%;
+  .login-wrapper {
+    @include mix.displayHorizontal;
+    gap: 1em;
+    .expo-info {
+      width: 50%;
+      max-width: 500px;
+      h1 {
+        font-family: "Gemunu", cursive;
+        color: colors.$purple_text;
+        font-weight: 600;
+      }
+      p {
+        font-family: "Quicksand";
+        font-weight: bold;
+      }
+      button {
+        display: block;
+        padding: 0.5em;
+        width: 40%;
+        font-family: "Gemunu";
+        font-size: 1.5rem;
+        color: #fff;
+        border: none;
+        border-radius: 30px;
+        background-color: colors.$blue_button;
+        cursor: pointer;
+        &:hover {
+          background-color: blue;
+        }
+      }
+    }
+    .login {
+      display: flex;
+      align-items: center;
+      width: 50%;
+      max-width: 700px;
+      margin-top: 0.5em;
+      form {
+        width: 60%;
+        background-color: colors.$black_soft;
+        box-shadow: 0px 0px 10px black;
+        border-radius: 30px;
+        img {
+          width: 100%;
+          border-top-left-radius: 30px;
+          border-top-right-radius: 30px;
+          filter: blur(1px);
+        }
+        h2 {
+          width: 100%;
+          text-align: center;
+          color: #fff;
+          font-family: "Quicksand", sans-serif;
+          font-size: 1.5rem;
+        }
+        .input-box {
+          @include mix.displayVertical;
+          width: 100%;
+          input[type="text"],
+          input[type="password"] {
+            width: 80%;
+            margin: 1em;
+            padding: 1em;
+            background-color: transparent;
+            border: 1px solid rgb(133, 119, 119);
+            border-radius: 10px;
+            color: #fff;
+            font-family: "Gemunu";
+            font-style: 1rem;
+            &:focus {
+              outline: 1px solid #0074d9;
+            }
+          }
+          .forgot {
+            font-size: 0.8rem;
+            color: colors.$gray_soft;
+            font-family: "Geo";
+          }
+        }
+        .btn-group {
+          @include mix.displayHorizontal;
+          width: 100%;
+          margin-top: 1em;
+          button {
+            width: 35%;
+            margin: 1em;
+            font-family: "Quicksand", sans-serif;
+            border: none;
+            padding: 1em;
+            border-radius: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            &:nth-child(1) {
+              background-color: #fff;
+              color: #000;
+            }
+            &:nth-child(2) {
+              background-color: colors.$blue_button;
+              color: #fff;
+            }
+          }
+        }
+        button {
+          display: block;
+          padding: 1em;
+          font-family: "Quicksand", sans-serif;
+          background-color: #fff;
+          color: #000;
+          border-radius: 30px;
+          border: none;
+          margin: auto;
+          margin-bottom: 0.5em;
+          font-weight: bold;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

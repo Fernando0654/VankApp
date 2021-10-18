@@ -1,0 +1,63 @@
+body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-size: 24px;
+}
+
+body::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    display: block;
+  }
+  
+  /* Ponemos un color de fondo y redondeamos las esquinas del thumb */
+  body::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+  body::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Cambiamos el fondo cuando esté en active */
+  body::-webkit-scrollbar-thumb:active {
+    background-color: #999999;
+  }
+  
+  /* Ponemos un color de fondo y redondeamos las esquinas del track */
+  body::-webkit-scrollbar-track {
+    background: #e1e1e1;
+    border-radius: 4px;
+  }
+  
+  /* Cambiamos el fondo cuando esté en active o hover */
+  body::-webkit-scrollbar-track:hover,
+  body::-webkit-scrollbar-track:active {
+    background: #d4d4d4;
+  }
+
+ol, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.change-lang {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 12%;
+  color: rgb(0, 0, 0);
+  font-family: "Quicksand";
+  font-size: 1.2vw;
+  border: 1px solid rgb(34, 32, 32);
+  span {
+    padding: 0.5em;
+  }
+}

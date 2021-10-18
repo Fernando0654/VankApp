@@ -1,0 +1,41 @@
+@use "../util/mixins" as mix;
+@use "../util/colors" as color;
+@use "../util/fonts";
+
+header {
+  @include mix.displayHorizontal;
+  width: 100%;
+  background-color: black;
+  .logo-img {
+    width: 50%;
+    margin-left: 2em;
+    h1 {
+      font-family: "Geo";
+      color: #ffffff;
+      font-size: 3rem;
+      margin: 0;
+      font-weight: lighter;
+      span {
+        font-family: "Quicksand", sans-serif;
+        color: color.$gray_soft;
+        font-size: 1rem;
+      }
+    }
+  }
+  .nav {
+    @include mix.displayHorizontal;
+    width: 45%;
+    justify-content: end;
+    margin-right: 2em;
+    li a {
+      display: block;
+      font-size: 1rem;
+      padding: 1em;
+      color: #fff;
+      font-family: "Quicksand", cursive;
+      &:hover {
+          color: color.$hover_blue;
+      }
+    }
+  }
+}
