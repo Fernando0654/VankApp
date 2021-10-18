@@ -11,22 +11,7 @@
     <link rel="stylesheet" href="/css/index.css" />
   </head>
   <body>
-    <header>
-      <div class="logo-img">
-        <h1>Vank App <span>Donde el dinero ocurre</span></h1>
-      </div>
-      <ul class="nav">
-        <li>
-          <a href="#">Sobre nosotros</a>
-        </li>
-        <li>
-          <a href="#">¿Cómo funciona?</a>
-        </li>
-        <li>
-          <a href="#">Ayuda</a>
-        </li>
-      </ul>
-    </header>
+    {{>navigation}}
     <main>
       {{> messages}}
       {{> errors}}

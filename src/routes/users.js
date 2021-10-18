@@ -25,15 +25,15 @@ router.post("/signup", async (req, res) => {
       phone,
     });
   } else {
-      const existEmail = User.findOne({email: email});
+      const existEmail = await User.findOne({email: email});
       if( existEmail ) {
-          req.flash('Este correo ya fue registrado');
-          res.redirect('/')
+          req.flash('error_msg', 'Este correo ya fue registrado');
+          res.redirect('/');
       }
       const newUser = new User({email, name, password, age, phone});
-      newUser.password = newUser.encryptPassword(password);
+      newUser.password = await newUser.encryptPassword(password);
       await newUser.save();
-      req.flash('Registro exitoso. Bienvenido, ');
+      req.flash('success_msg', 'Registro exitoso. Bienvenido, ');
       res.redirect('/');
   }
 });

@@ -8,17 +8,22 @@
     <button>Comenzar</button>
   </div>
   <div class="login">
-    <form>
+    <form action="/" method="post">
       <img src="./assets/img/login_header.jpg" alt="" />
       <h2>Iniciar Sesión</h2>
       <div class="input-box">
-        <input type="text" placeholder="Correo electrónico" />
-        <input type="password" placeholder="Contraseña" />
+        <input
+          type="text"
+          name="email"
+          placeholder="Correo electrónico"
+          autofocus
+        />
+        <input type="password" name="password" placeholder="Contraseña" />
         <a href="#" class="forgot">¿Olvidaste tu contraseña?</a>
       </div>
       <div class="btn-group">
-        <button>Acceder</button>
-        <button>Crear Cuenta</button>
+        <button type="submit">Acceder</button>
+        <button><a href="/signup" style="color: #fff">Crear Cuenta</a></button>
       </div>
     </form>
   </div>

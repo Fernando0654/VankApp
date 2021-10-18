@@ -1,0 +1,26 @@
+<header>
+  <div class="logo-img">
+    <h1>Vank App <span>Donde el dinero ocurre</span></h1>
+  </div>
+  <ul class="nav">
+    {{#if user}}
+      <li>
+        <a href="/logout"><i class="fa fa-user" aria-hidden="true"></i>
+          CERRAR SESIÓN</a>
+      </li>
+    {{else}}
+      <li>
+        <a href="/about">Sobre nosotros</a>
+      </li>
+      <li>
+        <a href="/help/how">¿Cómo funciona?</a>
+      </li>
+      <li>
+        <a href="/help">Ayuda</a>
+      </li>
+      <li>
+        <a href="/signup">Crear una cuenta</a>
+      </li>
+    {{/if}}
+  </ul>
+</header>

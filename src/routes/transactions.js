@@ -1,11 +1,12 @@
 const router = require("express").Router();
+const { isAuth } = require("../helpers/guard");
 const Transaction = require('../models/Transaction');
 
-router.get("/transacciones", (req, res) => {
+router.get("/transacciones", isAuth, (req, res) => {
   res.render("actions/makeTransaction");
 });
 
-router.post("/adding", async (req, res) => {
+router.post("/adding", isAuth, async (req, res) => {
   const { correo, concepto, cantidad } = req.body;
   const errors = [];
   if (!correo) {
@@ -30,6 +31,7 @@ router.post("/adding", async (req, res) => {
         concepto,
         cantidad
     });
+    newTransaction.user = req.user.id;
     await newTransaction.save();
     req.flash('success_msg', 'Transacción realizada con éxito');
     res.redirect("/panel")
