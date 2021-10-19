@@ -478,6 +478,19 @@ main .login-wrapper .login form button {
 .movimientos-wrapper .sidebar-body:nth-child(2) {
   width: auto;
 }
+.movimientos-wrapper .sidebar-body .badge {
+  background-color: #9dff005d;
+  font-family: "Quicksand";
+  text-align: center;
+  padding: 0.5em;
+}
+.movimientos-wrapper .sidebar-body .badge p {
+  font-size: 1.5rem;
+  color: #a21717;
+}
+.movimientos-wrapper .sidebar-body .badge a {
+  font-size: 1rem;
+}
 .movimientos-wrapper .sidebar-body.tabla table {
   table-layout: fixed;
   border-collapse: collapse;
@@ -889,6 +902,10 @@ main .login-wrapper .login form button {
 }
 .signup-wrapper form .btn-group button:hover {
   color: #b4d1eb;
+}
+
+.swal-button--confirm {
+  background: #345a94;
 }
 
 /*# sourceMappingURL=index.css.map */

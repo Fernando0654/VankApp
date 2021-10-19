@@ -32,20 +32,35 @@ router.post("/adding", isAuth, async (req, res) => {
       cantidad,
     });
   } else {
-    let nuevoSaldo = req.user.saldo - cantidad;
-    console.log(nuevoSaldo);
-    const newTransaction = new Transaction({
+    let fecha = new Date();
+    fecha = fecha.toLocaleString();
+    let saldoRemitente = req.user.saldo - cantidad;
+    let saldoDestinatario = parseInt(emailExist.saldo) + parseInt(cantidad);
+    let filtroDestino = { email: emailExist.email };
+    let actualizaDestino = { saldo: saldoDestinatario };
+    const filtroRemitente = { email: req.user.email };
+    const actualizaRemitente = { saldo: saldoRemitente };
+    const transaccionRemitente = new Transaction({
       correo,
       concepto,
       cantidad,
+      tipo: 'Enviado',
+      fecha
     });
-    const filter = { email: req.user.email };
-    const update = { saldo: nuevoSaldo };
-
+    const transaccionDestino = new Transaction({
+      correo,
+      concepto,
+      cantidad,
+      tipo: 'Recibido',
+      fecha
+    })
     // `doc` is the document _before_ `update` was applied
-    let doc = await User.findOneAndUpdate(filter, update);
-    newTransaction.user = req.user.id;
-    await newTransaction.save();
+    await User.findOneAndUpdate(filtroDestino, actualizaDestino); // Saldo del remitente
+    await User.findOneAndUpdate(filtroRemitente, actualizaRemitente); // Saldo del destinatario
+    transaccionRemitente.user = req.user.id;
+    transaccionDestino.user = emailExist._id;
+    await transaccionRemitente.save();
+    await transaccionDestino.save();
     req.flash("success_msg", "Transacción realizada con éxito");
     res.redirect("/panel");
   }

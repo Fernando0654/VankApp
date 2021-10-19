@@ -97,6 +97,19 @@
     &:nth-child(2) {
       width: auto;
     }
+    .badge {
+      background-color: #9dff005d;
+      font-family: "Quicksand";
+      text-align: center;
+      padding: 0.5em;
+      p {
+        font-size: 1.5rem;
+        color: rgb(162, 23, 23);
+      }
+      a {
+        font-size: 1rem;
+      }
+    }
     &.tabla {
       table {
         table-layout: fixed;

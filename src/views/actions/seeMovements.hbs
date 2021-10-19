@@ -35,25 +35,32 @@
     </div>
     <div class="movimientos-box tabla">
       <table id="historial">
-        <thead>
+        {{#if movimientos }}
+                <thead>
           <tr>
             <th>Fecha</th>
             <th>Concepto</th>
             <th>Tipo</th>
             <th>Número</th>
-            <th>Destinatario</th>
+            <th>De / Para</th>
             <th>Cantidad</th>
             <th>Acciones</th>
           </tr>
         </thead>
+        {{else}}
+        <div class="badge">
+          <p>No hay movimientos</p>
+          <a href="/transacciones">¡Haz una transacción!</a>
+        </div>
+        {{/if}}
         <tbody>
           {{#each movimientos}}
             <tr>
               <td>{{fecha}}</td>
               <td>{{concepto}}</td>
-              <td>Depósito</td>
+              <td>{{tipo}}</td>
               <td>6846131</td>
-              <td>Nelson Mandela</td>
+              <td>{{ correo }}</td>
               <td>{{cantidad}} $</td>
               <td>
                 <a href="movimiento/{{_id}}">
@@ -71,11 +78,7 @@
                 </button>
                 </form>
               </td>
-            </tr>
-          {{else}}
-            <div class="message">
-              <h1>No hay movimientos</h1>
-            </div>
+            </tr>            
           {{/each}}
         </tbody>
       </table>

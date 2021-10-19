@@ -11,13 +11,18 @@ passport.use(
       const user = await User.findOne({ email: email });
       if (!user) {
         // null porque no hay error, false para el user y mensaje
-        return done(null, false, { message: "Este usuario no existe" });
+        const errors = [];
+        return done(null, false, {
+          message: "Usuario o contraseña incorrectos",
+        });
       } else {
         const matchPassword = await user.matchPassword(password);
         if (matchPassword) {
           return done(null, user);
         } else {
-          return done(null, false, { message: "Contraseña incorrecta" });
+          return done(null, false, {
+            message: "Usuario o contraseña incorrectos",
+          });
         }
       }
     }

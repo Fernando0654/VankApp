@@ -5,3 +5,9 @@
     swal("Éxito", "{{success_msg}}", "success", { button: "Continuar"});
   </script>
 {{/if}}
+
+{{#if error_msg}}
+  <script>
+    swal("Error", "{{error_msg}}", "error", { button: "Continuar"});
+  </script>
+{{/if}}

@@ -1,7 +1,11 @@
-{{#each error}}
-<p>{{error}}</p>
-{{/each}}
+{{#if error}}
+  <script>
+    swal("Error", "{{error}}", "error", { button: "Continuar"});
+  </script>
+{{/if}}
 
 {{#each errors}}
-  <p>{{text}}</p>
+  <script>
+    swal("Error", "{{error_msg}}", "error", { button: "Continuar"});
+  </script>
 {{/each}}
