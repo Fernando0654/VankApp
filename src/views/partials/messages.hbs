@@ -1,3 +1,7 @@
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 {{#if success_msg}}
-<h1>{{success_msg}}</h1>
+  <script>
+    swal("Éxito", "{{success_msg}}", "success", { button: "Continuar"});
+  </script>
 {{/if}}

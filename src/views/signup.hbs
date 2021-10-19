@@ -1,16 +1,29 @@
 <style>
-    header {
-        display: none;
-    }
+  header { display: none; }
 </style>
 
 <div class="signup-wrapper">
   <form action="/signup" method="post">
     <h1>Registro</h1>
     <div class="input-group">
-      <input type="email" name="email" placeholder="Correo electrónico" value="{{email}}" />
-      <input type="text" name="name" placeholder="Nombre completo" value="{{name}}" />
-      <input type="password" name="password" placeholder="Contraseña" value="{{password}}" />
+      <input
+        type="email"
+        name="email"
+        placeholder="Correo electrónico"
+        value="{{email}}"
+      />
+      <input
+        type="text"
+        name="name"
+        placeholder="Nombre completo"
+        value="{{name}}"
+      />
+      <input
+        type="password"
+        name="password"
+        placeholder="Contraseña"
+        value="{{password}}"
+      />
       <input
         type="password"
         name="password_repeated"
@@ -20,7 +33,12 @@
     </div>
     <div class="input-group two">
       <input type="text" name="age" placeholder="Edad" value="{{age}}" />
-      <input type="text" name="phone" placeholder="Número de celular" value="{{phone}}" />
+      <input
+        type="text"
+        name="phone"
+        placeholder="Número de celular"
+        value="{{phone}}"
+      />
     </div>
     <div class="input-group">
       <div class="input-checkbox">

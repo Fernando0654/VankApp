@@ -6,7 +6,8 @@ router.get("/movimientos", isAuth, async (req, res) => {
   const movimientos = await Transaction.find({ user: req.user.id })
     .lean()
     .sort({ fecha: "desc" });
-  res.render("actions/seeMovements", { movimientos });
+  let saldo = req.user.saldo;
+  res.render("actions/seeMovements", { movimientos, saldo });
 });
 
 router.get("/movimiento/:id", isAuth, async (req, res) => {

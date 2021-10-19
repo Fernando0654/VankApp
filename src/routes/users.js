@@ -30,7 +30,8 @@ router.post("/signup", async (req, res) => {
           req.flash('error_msg', 'Este correo ya fue registrado');
           res.redirect('/');
       }
-      const newUser = new User({email, name, password, age, phone});
+      let saldo = 20000;
+      const newUser = new User({email, name, password, age, phone, saldo});
       newUser.password = await newUser.encryptPassword(password);
       await newUser.save();
       req.flash('success_msg', 'Registro exitoso. Bienvenido, ');
