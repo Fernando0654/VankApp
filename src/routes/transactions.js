@@ -9,7 +9,7 @@ router.get("/transacciones", isAuth, async (req, res) => {
 });
 
 router.post("/adding", isAuth, async (req, res) => {
-  const { correo, concepto, cantidad } = req.body;
+  let { correo, concepto, cantidad } = req.body;
   const errors = [];
   const emailExist = await User.findOne({ email: correo });
   if (!emailExist) {
@@ -47,6 +47,7 @@ router.post("/adding", isAuth, async (req, res) => {
       tipo: 'Enviado',
       fecha
     });
+    correo = req.user.email;
     const transaccionDestino = new Transaction({
       correo,
       concepto,

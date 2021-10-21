@@ -7,7 +7,10 @@ router.get('/', (req, res) => {
 })
 
 router.get('/panel', isAuth, (req, res) => {
-    res.render('panel')
+    let nombre = req.user.name;
+    nombre = nombre.split(" ");
+    nombre = nombre[0]
+    res.render('panel', {nombre})
 })
 
 router.post('/', passport.authenticate('local', {
@@ -18,7 +21,8 @@ router.post('/', passport.authenticate('local', {
 
 router.get('/logout', (req, res) => {
     req.logout();
-    res.redirect('/')
+    req.flash("success_msg", "Hasta luego. Vuelve pronto")
+    res.redirect('/');
 })
 
 module.exports = router;

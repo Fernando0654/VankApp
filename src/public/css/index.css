@@ -908,4 +908,109 @@ main .login-wrapper .login form button {
   background: #345a94;
 }
 
+.component-header .component-route.config-route {
+  width: 85%;
+}
+.component-header .component-route.config-route h1 {
+  border-left: 7px solid #000;
+}
+
+.sidebar-body {
+  margin-bottom: 3em;
+}
+.sidebar-body .configuration-wrapper {
+  box-shadow: 0px 0px 10px gray;
+  border-radius: 15px;
+}
+.sidebar-body .configuration-wrapper .user-information-card {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 250px;
+}
+.sidebar-body .configuration-wrapper .user-information-card .information-card_header {
+  width: 100%;
+  text-align: right;
+}
+.sidebar-body .configuration-wrapper .user-information-card .fa-user-circle {
+  width: 100%;
+  font-size: 5em;
+  text-align: center;
+}
+.sidebar-body .configuration-wrapper .user-information-card p {
+  font-family: "Quicksand", sans-serif;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.sidebar-body .configuration-wrapper .information-card_footer {
+  width: 100%;
+  background-color: #0074d9;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.sidebar-body .configuration-wrapper .information-card_footer span {
+  display: block;
+  padding: 1em;
+  font-family: "Quicksand", sans-serif;
+  text-align: center;
+  color: #fff;
+  font-weight: 500;
+}
+
+.movimientos-box .title-contactos {
+  width: 100%;
+  text-align: center;
+  font-family: "Gemunu";
+  font-weight: lighter;
+}
+.movimientos-box .wrapper-contacts {
+  display: flex;
+  flex-wrap: wrap;
+}
+.movimientos-box .wrapper-contacts .card-contacto {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em;
+  margin: 1em;
+  background-color: #1d1d52;
+  box-shadow: 0px 0px 10px gray;
+}
+.movimientos-box .wrapper-contacts .card-contacto .fa-user {
+  display: block;
+  padding: 0.5em;
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+.movimientos-box .wrapper-contacts .card-contacto span {
+  font-family: "Quicksand";
+  padding: 0.5em;
+  font-size: 1rem;
+  color: #fff;
+}
+.movimientos-box .wrapper-contacts .card-contacto form button {
+  color: red;
+  padding: 0;
+  margin: 0;
+  margin-top: 1.5em;
+  border: none;
+}
+.movimientos-box .wrapper-contacts .card-contacto form button:hover {
+  color: #c51b1b;
+}
+.movimientos-box button {
+  display: block;
+  width: 30%;
+  border: 1px solid #1a4dbb;
+  font-family: "Quicksand";
+  background-color: transparent;
+  margin: 1em;
+  padding: 1em;
+  color: #0074d9;
+  cursor: pointer;
+}
+
 /*# sourceMappingURL=index.css.map */
