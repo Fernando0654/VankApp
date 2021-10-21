@@ -167,13 +167,13 @@ main .login-wrapper .expo-info button:hover {
 main .login-wrapper .login {
   display: flex;
   align-items: center;
-  width: 50%;
+  width: 30%;
   max-width: 700px;
   margin-top: 0.5em;
 }
 main .login-wrapper .login form {
-  width: 60%;
-  min-height: 60vh;
+  width: 100%;
+  min-height: 80vh;
   background-color: #082946;
   box-shadow: 0px 0px 10px black;
   border-radius: 30px;
@@ -745,10 +745,10 @@ main .login-wrapper .login form button {
 }
 
 .signup-wrapper {
-  background: url(../assets/img/bg-pattern-bottom.svg);
-  background-repeat: repeat;
-  background-size: 50%;
-  background-position: left;
+  background: url(../assets/img/bg_signup.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   min-height: 100vh;
 }
 .signup-wrapper form {
