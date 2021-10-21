@@ -59,14 +59,13 @@ app.use((req, res, next) => {
   next();
 })
 
-
-
 // Rutas
 
 app.use(require("./routes/index"));
 app.use(require("./routes/transactions"));
 app.use(require("./routes/movements"));
 app.use(require("./routes/users"));
+app.use(require("./routes/contactos"));
 app.use(require("./routes/config"));
 
 // Archivos estáticos

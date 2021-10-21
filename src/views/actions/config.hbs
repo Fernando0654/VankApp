@@ -13,64 +13,24 @@
     </div>
   </div>
   <div class="sidebar-body">
-    <div class="configuration-wrapper">
-      <div class="user-information-card">
-        <div class="information-card_header">
-          <a href="/edit/config">
-            <i class="fa fa-pencil-square" aria-hidden="true"></i></a>
-        </div>
-        <i class="fa fa-user-circle" aria-hidden="true"></i>
-        <p>{{name}}</p>
-        <p>{{email}}</p>
-        <p>{{phone}}</p>
-        <p>{{age}} años</p>
-      </div>
-      <div class="information-card_footer">
-        <span>Saldo: {{saldo}} $</span>
-      </div>
-    </div>
-
+    {{>card-user}}
     <div class="movimientos-box transacciones-box">
-      <h1 class="title-contactos">Contactos</h1>
+      <h1 class="title-contactos">Tarjetas asociadas</h1>
       <div class="wrapper-contacts">
-        {{#if contactos}}{{else}}
-          <div class="badge">
-            <p>Parece que no tienes contactos</p>
-            <a
-              onclick="addContact()"
-              style="cursor: pointer; color: #0074d9"
-            >¡Agrega uno!</a>
+          <div class="card-information">
+              <div class="icon">
+                  <i class="fa fa-cc-{{tipo}} icon-inner" aria-hidden="true"></i>
+                  <span class="principal">Tarjeta principal</span>
+              </div>
+              <div class="info-text">
+                  <p><strong>Número de tarjeta:</strong> {{numero}}</p>
+                  <p><strong>Vencimiento:</strong> {{expira}}</p>
+                  <p><strong>Locación:</strong> {{address}}</p>
+                  <p><strong>Tipo:</strong> {{tipo}}</p>
+              </div>
           </div>
-        {{/if}}
-        {{#each contactos}}
-          <div class="card-contacto">
-            <i class="fa fa-user" aria-hidden="true"></i>
-            <span>{{nameContact}}</span>
-            <form
-              action="/contacto/borrar/{{_id}}?_method=DELETE"
-              method="post"
-            >
-              <input type="hidden" name="_method" value="DELETE" />
-              <button type="submit"><i
-                  class="fa fa-trash-o"
-                  aria-hidden="true"
-                ></i>
-              </button>
-            </form>
-          </div>
-        {{/each}}
       </div>
-      <button onclick="addContact()">Agregar contacto
-        <i class="fa fa-plus" aria-hidden="true"></i>
-      </button>
+      <button>Asociar tarjeta <i class="fa fa-plus" aria-hidden="true"></i></button>
     </div>
   </div>
 </div>
-
-<script>
-  function addContact() { swal({ content: { element: "input", attributes: {
-  placeholder: "Correo del contacto que quieres agregar", type: "email", }, },
-  button: { text: "Agregar" } }).then((emailToAdd) => { if(!emailToAdd) {
-  swal("Error", "El campo no puede estar vacío", "error", {button: "Cerrar"})
-  return; } window.location.href = `/agregar/${emailToAdd}`; }); }
-</script>

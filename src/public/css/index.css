@@ -434,25 +434,28 @@ main .login-wrapper .login form button {
 .movimientos-wrapper .sidebar-body .sidebar-box h2 span {
   font-weight: bold;
 }
-.movimientos-wrapper .sidebar-body .sidebar-box > span {
+.movimientos-wrapper .sidebar-body .sidebar-box form {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  margin: 0.5em;
-  font-family: "Quicksand";
-  font-size: 1rem;
-  font-weight: bold;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  box-shadow: 0px 0px 10px rgba(58, 55, 55, 0.1);
 }
-.movimientos-wrapper .sidebar-body .sidebar-box > span .filtros {
+.movimientos-wrapper .sidebar-body .sidebar-box form .filtros {
   width: 70%;
   border: none;
   font-family: "Quicksand";
   outline: none;
+  cursor: pointer;
+}
+.movimientos-wrapper .sidebar-body .sidebar-box form button {
+  width: 50%;
+  background-color: transparent;
+  border: 1px solid #0074d9;
+  margin-top: 1em;
+  padding: 1em;
+  font-family: "Quicksand", sans-serif;
+  cursor: pointer;
+}
+.movimientos-wrapper .sidebar-body .sidebar-box form button:hover {
+  background-color: #215079;
+  color: #fff;
 }
 .movimientos-wrapper .sidebar-body .sidebar-box .help h2 {
   border: none;
@@ -942,7 +945,8 @@ main .login-wrapper .login form button {
   margin-bottom: 3em;
 }
 .sidebar-body .configuration-wrapper {
-  box-shadow: 0px 0px 10px gray;
+  border: 1px solid rgba(107, 94, 94, 0.268);
+  box-shadow: inset 0px 0px 3px #656470;
   border-radius: 15px;
 }
 .sidebar-body .configuration-wrapper .user-information-card {
@@ -975,11 +979,12 @@ main .login-wrapper .login form button {
 }
 .sidebar-body .configuration-wrapper .information-card_footer span {
   display: block;
-  padding: 1em;
+  padding: 0.5em;
   font-family: "Quicksand", sans-serif;
   text-align: center;
   color: #fff;
   font-weight: 500;
+  font-size: 1rem;
 }
 
 .movimientos-box .title-contactos {
@@ -1023,6 +1028,49 @@ main .login-wrapper .login form button {
 }
 .movimientos-box .wrapper-contacts .card-contacto form button:hover {
   color: #c51b1b;
+}
+.movimientos-box .wrapper-contacts .card-information {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #141237;
+  box-shadow: 0px 0px 1px blue;
+  padding: 0.5em;
+  gap: 0.5em;
+  width: auto;
+}
+.movimientos-box .wrapper-contacts .card-information .icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+}
+.movimientos-box .wrapper-contacts .card-information .icon .icon-inner {
+  width: 100%;
+  text-align: center;
+  font-size: 3rem;
+  color: #fff;
+}
+.movimientos-box .wrapper-contacts .card-information .icon span {
+  display: block;
+  width: 100%;
+  font-size: 0.8rem;
+  font-family: "Quicksand", sans-serif;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+.movimientos-box .wrapper-contacts .card-information .info-text {
+  width: 70%;
+}
+.movimientos-box .wrapper-contacts .card-information .info-text p {
+  font-size: 0.8rem;
+  font-family: "Quicksand", sans-serif;
+  font-weight: lighter;
+  color: #e8dada;
 }
 .movimientos-box button {
   display: block;

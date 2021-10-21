@@ -1,0 +1,60 @@
+<div class="movimientos-wrapper transacciones-wrapper">
+  <div class="component-header">
+    <div class="component-route config-route">
+      <h1>
+        Contactos
+        <a href="/panel">Inicio ></a>
+        <a href="#">Contactos</a>
+      </h1>
+    </div>
+    <div class="change-lang">
+      <i class="fa fa-language" aria-hidden="true"></i>
+      <span>Idioma: Es</span>
+    </div>
+  </div>
+  <div class="sidebar-body">
+    {{>card-user}}
+    <div class="movimientos-box transacciones-box">
+      <h1 class="title-contactos">Contactos</h1>
+      <div class="wrapper-contacts">
+        {{#if contactos}}{{else}}
+          <div class="badge">
+            <p>Parece que no tienes contactos</p>
+            <a
+              onclick="addContact()"
+              style="cursor: pointer; color: #0074d9"
+            >¡Agrega uno!</a>
+          </div>
+        {{/if}}
+        {{#each contactos}}
+          <div class="card-contacto">
+            <i class="fa fa-user" aria-hidden="true"></i>
+            <span>{{nameContact}}</span>
+            <form
+              action="/contacto/borrar/{{_id}}?_method=DELETE"
+              method="post"
+            >
+              <input type="hidden" name="_method" value="DELETE" />
+              <button type="submit"><i
+                  class="fa fa-trash-o"
+                  aria-hidden="true"
+                ></i>
+              </button>
+            </form>
+          </div>
+        {{/each}}
+      </div>
+      <button onclick="addContact()">Agregar contacto
+        <i class="fa fa-plus" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+  function addContact() { swal({ content: { element: "input", attributes: {
+  placeholder: "Correo del contacto que quieres agregar", type: "email", }, },
+  button: { text: "Agregar" } }).then((emailToAdd) => { if(!emailToAdd) {
+  swal("Error", "El campo no puede estar vacío", "error", {button: "Cerrar"})
+  return; } window.location.href = `/agregar/${emailToAdd}`; }); }
+</script>

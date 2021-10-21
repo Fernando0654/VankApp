@@ -76,7 +76,7 @@ router.post("/signup", async (req, res) => {
     });
     newUser.password = await newUser.encryptPassword(password);
     await newUser.save();
-    req.flash("success_msg", "Registro exitoso. Bienvenido, ");
+    req.flash("success_msg", "Registro exitoso. Bienvenido ");
     res.redirect("/");
   }
 });

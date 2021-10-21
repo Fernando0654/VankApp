@@ -15,15 +15,17 @@
   <div class="sidebar-body">
     <div class="sidebar-box">
       {{>saldo}}
-      <span>Filtro: &nbsp;&nbsp;
-        <select id="filtros" class="filtros">
+        <form action="/movimientos" method="post">
+        <select name="filtro" id="filtros" class="filtros">
           <option value="recientes">Más recientes</option>
           <option value="antiguos">Más antiguos</option>
           <option value="cantidadAlta">Cantidad mayor a menor</option>
           <option value="cantidadBaja">Cantidad menor a mayor</option>
           <option value="elegir" selected>Elegir opción</option>
         </select>
-      </span>
+        <button type="submit">Aplicar filtro</button>
+        </form>
+
       <div class="help">
         <h2>Ayuda</h2>
         <p>
@@ -82,7 +84,6 @@
           {{/each}}
         </tbody>
       </table>
-
     </div>
   </div>
 </div>
