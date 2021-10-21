@@ -176,12 +176,9 @@ main .login-wrapper .login form {
   min-height: 80vh;
   background-color: #082946;
   box-shadow: 0px 0px 10px black;
-  border-radius: 30px;
 }
 main .login-wrapper .login form img {
   width: 100%;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
   filter: blur(1px);
 }
 main .login-wrapper .login form h2 {
@@ -246,6 +243,9 @@ main .login-wrapper .login form .btn-group button:nth-child(2) {
   background-color: transparent;
   color: #fff;
   border: 1px solid #fff;
+}
+main .login-wrapper .login form .btn-group button:hover {
+  font-weight: bold;
 }
 main .login-wrapper .login form button {
   display: block;
@@ -767,6 +767,12 @@ main .login-wrapper .login form button {
   font-family: "Quicksand";
   font-size: 1.5rem;
   text-align: center;
+  font-weight: lighter;
+  color: #fff;
+}
+.signup-wrapper form a {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1rem;
   color: #fff;
 }
 .signup-wrapper form .input-group {
@@ -780,7 +786,7 @@ main .login-wrapper .login form button {
 .signup-wrapper form .input-group input[type=password] {
   width: 100%;
   border: none;
-  border-bottom: 1px solid rgba(233, 224, 224, 0.583);
+  border: 1px solid rgba(233, 224, 224, 0.303);
   background-color: transparent;
   padding: 1em;
   font-family: "Gemunu";
@@ -805,6 +811,23 @@ main .login-wrapper .login form button {
   justify-content: center;
   gap: 0.5em;
 }
+.signup-wrapper form .input-group.two input[type=text] {
+  width: 50%;
+}
+.signup-wrapper form .input-group.two select {
+  width: 50%;
+  padding: 1em;
+  margin-top: 1em;
+  font-family: "Quicksand";
+  font-size: 1rem;
+  border: none;
+  appearance: none;
+}
+.signup-wrapper form .input-group.two select:disabled {
+  background-color: transparent;
+  border: 1px solid rgba(233, 224, 224, 0.303);
+  color: #fff;
+}
 .signup-wrapper form .input-group .input-checkbox {
   position: relative;
   display: block;
@@ -821,14 +844,13 @@ main .login-wrapper .login form button {
   width: 20px;
   height: 20px;
   outline: 1px solid transparent;
-  border-radius: 30px;
 }
 .signup-wrapper form .input-group .input-checkbox input {
   cursor: pointer;
   opacity: 0;
 }
 .signup-wrapper form .input-group .input-checkbox input:checked ~ label .input-checkbox_box {
-  background-color: #000000;
+  background-color: #7018b8;
 }
 .signup-wrapper form .input-group .input-checkbox input:active ~ label {
   top: 1px;
@@ -884,6 +906,7 @@ main .login-wrapper .login form button {
   font-size: 1rem;
   text-align: center;
   color: #0074d9;
+  margin-top: 2em;
 }
 .signup-wrapper form .btn-group a:hover {
   color: gray;

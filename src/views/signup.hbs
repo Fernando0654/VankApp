@@ -3,55 +3,132 @@
 </style>
 
 <div class="signup-wrapper">
-  <form action="/signup" method="post">
-    <h1>Registro</h1>
-    <div class="input-group">
-      <input
-        type="email"
-        name="email"
-        placeholder="Correo electrónico"
-        value="{{email}}"
-      />
-      <input
-        type="text"
-        name="name"
-        placeholder="Nombre completo"
-        value="{{name}}"
-      />
-      <input
-        type="password"
-        name="password"
-        placeholder="Contraseña"
-        value="{{password}}"
-      />
-      <input
-        type="password"
-        name="password_repeated"
-        placeholder="Repetir contraseña"
-        value="{{password_repeated}}"
-      />
-    </div>
-    <div class="input-group two">
-      <input type="text" name="age" placeholder="Edad" value="{{age}}" />
-      <input
-        type="text"
-        name="phone"
-        placeholder="Número de celular"
-        value="{{phone}}"
-      />
-    </div>
-    <div class="input-group">
-      <div class="input-checkbox">
-        <input id="input-checkbox-example" type="checkbox" />
-        <label for="input-checkbox-example">
-          <span class="input-checkbox_box" aria-hidden="true"></span>
-          <span class="input-checkbox_content">Acepto términos y condiciones</span>
-        </label>
+  <form action="/signup" method="post" autocomplete="off">
+    <div class="step1">
+      <h1>Registro</h1>
+      <div class="input-group">
+        <input
+          type="email"
+          name="email"
+          placeholder="Correo electrónico"
+          value="{{email}}"
+        />
+        <input
+          type="text"
+          name="name"
+          placeholder="Nombre completo"
+          value="{{name}}"
+        />
+        <input
+          type="password"
+          name="password"
+          placeholder="Contraseña"
+          value="{{password}}"
+          autocomplete="on"
+        />
+        <input
+          type="password"
+          name="password_repeated"
+          placeholder="Repetir contraseña"
+          value="{{password_repeated}}"
+          autocomplete="on"
+        />
+      </div>
+      <div class="input-group two">
+        <input type="text" name="age" placeholder="Edad" value="{{age}}" />
+        <input
+          type="text"
+          name="phone"
+          class="phone"
+          placeholder="Número de celular"
+          value="{{phone}}"
+        />
+      </div>
+      <div class="btn-group">
+        <a href="/">¿Ya tienes una cuenta? Da click aquí</a>
+        <button type="button" id="next">Siguiente</button>
       </div>
     </div>
-    <div class="btn-group">
-      <a href="/">¿Ya tienes una cuenta? Da click aquí</a>
-      <button type="submit">Registrarme</button>
+    <div class="step2">
+      <h1>Tarjeta principal</h1>
+      <a href="#" id="back">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        &nbsp;&nbsp;Volver atrás</a>
+      <div class="input-group">
+        <input
+          type="text"
+          name="numero"
+          class="numero"
+          placeholder="Número de tarjeta de débito o crédito"
+          value="{{numero}}"
+        />
+        <input
+          type="text"
+          name="expira"
+          class="expira"
+          placeholder="Vencimiento"
+          value="{{expira}}"
+        />
+        <input
+          type="text"
+          name="address"
+          placeholder="Dirección de la tarjeta"
+          value="{{address}}"
+        />
+      </div>
+      <div class="input-group two">
+        <input
+          type="text"
+          name="cvv"
+          placeholder="Código de seguridad"
+          value="{{cvv}}"
+        />
+        <select name="tipo" id="tipo" disabled>
+          <option value="init">Tipo de la tarjeta</option>
+          <option value="mastercard">Mastercard</option>
+          <option value="visa">Visa</option>
+          <option value="amex">American Express</option>
+          <option value="none">Tarjeta no admitida</option>
+        </select>
+      </div>
+      <div class="input-group">
+        <div class="input-checkbox">
+          <input id="input-checkbox-example" type="checkbox" />
+          <label for="input-checkbox-example">
+            <span class="input-checkbox_box" aria-hidden="true"></span>
+            <span class="input-checkbox_content">Acepto términos y condiciones</span>
+          </label>
+        </div>
+      </div>
+      <div class="btn-group">
+        <button type="submit">Registrarme</button>
+      </div>
     </div>
   </form>
 </div>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.6.0/cleave.min.js"
+  integrity="sha512-KaIyHb30iXTXfGyI9cyKFUIRSSuekJt6/vqXtyQKhQP6ozZEGY8nOtRS6fExqE4+RbYHus2yGyYg1BrqxzV6YA=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.6.0/addons/cleave-phone.mx.js"
+  integrity="sha512-zjJld7xbEJOaT4Ajm8nCdT3hZ6RAf3coBiYgpBTUyqYY3NNclzBH8o9vAtK421VcrwIQQpk9Go8tUDmRYya7EQ=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+<script>
+  let tipo = document.getElementById('tipo');
+  const step_1 = document.querySelector('.step1'); const step_2 =
+  document.querySelector('.step2'); const btn_open =
+  document.getElementById('next'); step_2.style.display = "none"; const
+  btn_close = document.getElementById('back');
+  btn_open.addEventListener('click', () => { step_1.style.display = "none";
+  step_2.style.display = "block"; }); btn_close.addEventListener('click', () =>
+  { step_1.style.display = "block"; step_2.style.display = "none"; }); var
+  cleave = new Cleave('.phone', { phone: true, phoneRegionCode: 'mx' }); var
+  cleave = new Cleave('.expira', { date: true, datePattern: ['m', 'y'] }); var
+  cleave = new Cleave('.numero', { creditCard: true, onCreditCardTypeChanged:
+  function (type) { console.log(type);type === "unknown" ? tipo.value = "none": tipo.value = type } });
+</script>

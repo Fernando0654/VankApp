@@ -23,6 +23,12 @@
       font-family: "Quicksand";
       font-size: 1.5rem;
       text-align: center;
+      font-weight: lighter;
+      color: #fff;
+    }
+    a {
+      font-family: "Quicksand", sans-serif;
+      font-size: 1rem;
       color: #fff;
     }
     .input-group {
@@ -32,7 +38,7 @@
       input[type="password"] {
         width: 100%;
         border: none;
-        border-bottom: 1px solid rgba(233, 224, 224, 0.583);
+        border: 1px solid rgba(233, 224, 224, 0.303);
         background-color: transparent;
         padding: 1em;
         font-family: "Gemunu";
@@ -49,6 +55,23 @@
       &.two {
         @include mix.displayHorizontal;
         gap: 0.5em;
+        input[type="text"] {
+          width: 50%;
+        }
+        select {
+          width: 50%;
+          padding: 1em;
+          margin-top: 1em;
+          font-family: "Quicksand";
+          font-size: 1rem;
+          border: none;
+          appearance: none;
+          &:disabled {
+            background-color: transparent;
+            border: 1px solid rgba(233, 224, 224, 0.303);
+            color: #fff;
+          }
+        }
       }
       .input-checkbox {
         position: relative;
@@ -65,13 +88,12 @@
           width: 20px;
           height: 20px;
           outline: 1px solid transparent;
-          border-radius: 30px;
         }
         input {
           cursor: pointer;
           opacity: 0;
           &:checked ~ label .input-checkbox_box {
-            background-color: #000000;
+            background-color: #7018b8;
           }
           &:active ~ label {
             top: 1px;
@@ -136,6 +158,7 @@
         font-size: 1rem;
         text-align: center;
         color: #0074d9;
+        margin-top: 2em;
         &:hover {
           color: gray;
         }

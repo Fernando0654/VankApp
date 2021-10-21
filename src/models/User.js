@@ -8,7 +8,12 @@ const User = new Schema({
     password: {type: String, required: true},
     age: {type: String, required: true},
     phone: {type: String, required: true},
-    saldo: {type: Number, required: true}
+    saldo: {type: Number, required: true},
+    numero: {type: String, required: true},
+    expira: {type: String, required: true},
+    address: {type: String, required: true},
+    cvv: {type: String, required: true},
+    tipo: {type: String, required: true}
 });
 
 User.methods.encryptPassword = async (password) => {

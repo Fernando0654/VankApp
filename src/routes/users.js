@@ -1,13 +1,38 @@
 const router = require("express").Router();
-const User = require('../models/User')
-
+const User = require("../models/User");
 router.get("/signup", (req, res) => {
   res.render("signup");
 });
 
 router.post("/signup", async (req, res) => {
-  const { email, name, password, password_repeated, age, phone } = req.body;
+  const {
+    email,
+    name,
+    password,
+    password_repeated,
+    age,
+    phone,
+    numero,
+    expira,
+    address,
+    cvv,
+    tipo,
+  } = req.body;
   const errors = [];
+  if (
+    email == "" ||
+    name == "" ||
+    password == "" ||
+    age == "" ||
+    phone == "" ||
+    numero == "" ||
+    expira == "" ||
+    address == "" ||
+    cvv == "" ||
+    tipo == ""
+  ) {
+    errors.push({ text: "Rellena todos los campos, por favor" });
+  }
   if (password != password_repeated) {
     errors.push({ text: "Las contraseñas no coinciden" });
   }
@@ -23,19 +48,36 @@ router.post("/signup", async (req, res) => {
       password_repeated,
       age,
       phone,
+      numero,
+      expira,
+      address,
+      cvv,
+      tipo,
     });
   } else {
-      const existEmail = await User.findOne({email: email});
-      if( existEmail ) {
-          req.flash('error_msg', 'Este correo ya fue registrado');
-          res.redirect('/');
-      }
-      let saldo = 20000;
-      const newUser = new User({email, name, password, age, phone, saldo});
-      newUser.password = await newUser.encryptPassword(password);
-      await newUser.save();
-      req.flash('success_msg', 'Registro exitoso. Bienvenido, ');
-      res.redirect('/');
+    const existEmail = await User.findOne({ email: email });
+    if (existEmail) {
+      req.flash("error_msg", "Este correo ya fue registrado");
+      res.redirect("/");
+    }
+    let saldo = 20000;
+    const newUser = new User({
+      email,
+      name,
+      password,
+      age,
+      phone,
+      saldo,
+      numero,
+      expira,
+      address,
+      cvv,
+      tipo,
+    });
+    newUser.password = await newUser.encryptPassword(password);
+    await newUser.save();
+    req.flash("success_msg", "Registro exitoso. Bienvenido, ");
+    res.redirect("/");
   }
 });
 
