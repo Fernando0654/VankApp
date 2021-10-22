@@ -2,21 +2,31 @@ const router = require("express").Router();
 const { isAuth } = require("../helpers/guard");
 const Transaction = require("../models/Transaction");
 const User = require("../models/User");
+const Contact = require("../models/Contacts");
 
 router.get("/transacciones", isAuth, async (req, res) => {
   const saldo = req.user.saldo;
-  res.render("actions/makeTransaction", { saldo });
+  const contactos = await Contact.find({ belongTo: req.user.email }).lean();
+  res.render("actions/makeTransaction", { saldo, contactos });
 });
 
 router.post("/adding", isAuth, async (req, res) => {
   let { correo, concepto, cantidad } = req.body;
+  const saldo = req.user.saldo;
   const errors = [];
   const emailExist = await User.findOne({ email: correo });
-  if (!emailExist) {
-    errors.push({ text: "Este usuario no existe" });
-  }
   if (!correo) {
     errors.push({ text: "Por favor, introduce un correo" });
+  } else {
+    if (!emailExist) {
+      errors.push({ text: "Este usuario no existe" });
+    } else {
+      if (emailExist.email === req.user.email) {
+        errors.push({
+          text: "No puedes depositarte a ti mismo, no seas lacra",
+        });
+      }
+    }
   }
   if (!concepto) {
     errors.push({ text: "Por favor, introduce un concepto" });
@@ -25,11 +35,14 @@ router.post("/adding", isAuth, async (req, res) => {
     errors.push({ text: "Por favor, introduce una cantidad" });
   }
   if (errors.length > 0) {
+    const contactos = await Contact.find({ belongTo: req.user.email }).lean();
     res.render("actions/makeTransaction", {
       errors,
       correo,
       concepto,
       cantidad,
+      saldo,
+      contactos,
     });
   } else {
     let fecha = new Date();
@@ -44,17 +57,17 @@ router.post("/adding", isAuth, async (req, res) => {
       correo,
       concepto,
       cantidad,
-      tipo: 'Enviado',
-      fecha
+      tipo: "Enviado",
+      fecha,
     });
     correo = req.user.email;
     const transaccionDestino = new Transaction({
       correo,
       concepto,
       cantidad,
-      tipo: 'Recibido',
-      fecha
-    })
+      tipo: "Recibido",
+      fecha,
+    });
     // `doc` is the document _before_ `update` was applied
     await User.findOneAndUpdate(filtroDestino, actualizaDestino); // Saldo del remitente
     await User.findOneAndUpdate(filtroRemitente, actualizaRemitente); // Saldo del destinatario

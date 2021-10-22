@@ -1,11 +1,15 @@
 {{#if error}}
   <script>
-    swal("Error", "{{error_msg}}", "error", { button: "Continuar"});
+    swal("Error", "{{error}}", "error", { button: "Continuar"});
   </script>
 {{/if}}
 
-{{#each errors}}
-  <script>
-    swal("Error", "{{error_msg}}", "error", { button: "Continuar"});
-  </script>
-{{/each}}
+<div class="errors-wrapper">
+  {{#each errors}}
+    <span class="error"><i
+        class="fa fa-times"
+        aria-hidden="true"
+        onclick="console.log(e)"
+      ></i>&nbsp;{{text}}</span>
+  {{/each}}
+</div>

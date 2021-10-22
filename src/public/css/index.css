@@ -443,6 +443,7 @@ main .login-wrapper .login form button {
   font-family: "Quicksand";
   outline: none;
   cursor: pointer;
+  line-height: 2;
 }
 .movimientos-wrapper .sidebar-body .sidebar-box form button {
   width: 50%;
@@ -658,6 +659,15 @@ main .login-wrapper .login form button {
 }
 .transacciones-wrapper .card-input .card-body .input-group input[type=submit]:hover {
   background-color: #0074d9;
+}
+.transacciones-wrapper .card-input .card-body .input-group select {
+  display: block;
+  margin-top: 1em;
+  width: 90%;
+  padding: 0.5em;
+  font-family: "Quicksand", sans-serif;
+  outline: none;
+  line-height: 2;
 }
 
 .cartera-wrapper .component-header .component-route.cartera-route {
@@ -1082,6 +1092,44 @@ main .login-wrapper .login form button {
   padding: 1em;
   color: #0074d9;
   cursor: pointer;
+}
+
+.errors-wrapper {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: -100%;
+  animation: openUp 0.5s ease forwards, closenUp 0.5s linear 5s forwards;
+}
+.errors-wrapper .error {
+  display: block;
+  color: white;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1rem;
+  font-weight: lighter;
+  padding: 0.5em;
+  margin-top: 0.5em;
+  background-color: #e80f0f;
+  border: 1px solid red;
+  box-shadow: 0px 0px 5px rgba(255, 0, 0, 0.651);
+  cursor: pointer;
+}
+
+@keyframes openUp {
+  from {
+    right: -100%;
+  }
+  to {
+    right: 0;
+  }
+}
+@keyframes closenUp {
+  from {
+    right: 0;
+  }
+  to {
+    right: -100%;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
