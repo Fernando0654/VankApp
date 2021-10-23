@@ -2,13 +2,15 @@
   <div class="user-information-card">
     <div class="information-card_header">
       <a href="/edit/config">
-        <i class="fa fa-pencil-square" aria-hidden="true"></i></a>
+        Editar
+        <i class="fa fa-pencil-square" aria-hidden="true"></i>
+      </a>
     </div>
+    <span><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp; {{name}}</span>
     <i class="fa fa-user-circle" aria-hidden="true"></i>
-    <p>{{name}}</p>
-    <p>{{email}}</p>
-    <p>{{phone}}</p>
-    <p>{{age}} años</p>
+    <span><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;{{email}}</span>
+    <span><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;{{phone}}</span>
+    <span><i class="fa fa-birthday-cake" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;{{age}} años</span>
   </div>
   <div class="information-card_footer">
     <span>Saldo: {{saldo}} $</span>

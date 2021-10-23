@@ -15,7 +15,7 @@
   .card-input {
     display: block;
     width: 100%;
-    background-color: lavender;
+    background-color: rgb(228, 220, 220);
     &:nth-child(2) {
         margin-top: 2em;
         margin-bottom: 2em
@@ -46,6 +46,14 @@
         font-size: 1rem;
         font-family: "Quicksand";
         color: rgb(73, 65, 65);
+      }
+      .warning {
+        display: block;
+        font-family: "Quicksand", sans-serif;
+        font-size: 1rem;
+        background-color: rgba(255, 255, 0, 0.474);
+        margin: 1em;
+        padding: 1em;
       }
       .input-group {
         width: 100%;

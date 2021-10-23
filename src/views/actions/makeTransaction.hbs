@@ -57,7 +57,8 @@
           <p>
             De tu lista de contactos, elige a uno y ¡listo!
           </p>
-          <form action="/adding" method="post" class="input-group">
+          {{#if contactos}}
+                    <form action="/adding" method="post" class="input-group">
             <select name="correo">
               {{#each contactos}}
               <option value="{{emailContact}}">{{nameContact}}</option>
@@ -69,6 +70,9 @@
               <input type="submit" value="Depositar" />
             </div>
           </form>
+          {{else}}
+          <span class="warning">Parece que no tienes ningún contacto </span>
+          {{/if}}
         </div>
       </div>
     </div>

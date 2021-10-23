@@ -4,6 +4,7 @@ body {
   padding: 0;
   margin: 0;
   font-size: 24px;
+  background-color: white;
 }
 
 body::-webkit-scrollbar {
@@ -295,10 +296,10 @@ main .login-wrapper .login form button {
   gap: 1.5em;
 }
 .panel-user .panel-action .panel-box {
-  background-color: #1a4d79;
+  background-color: #ffffff;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9);
   padding: 1em;
-  border-left: 10px solid white;
+  border-left: 10px solid #1a4d79;
 }
 .panel-user .panel-action .panel-box h2 {
   width: 100%;
@@ -307,8 +308,8 @@ main .login-wrapper .login form button {
   font-size: 1.2rem;
   margin: 0;
   padding-bottom: 0.5em;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.604);
-  color: #fff;
+  border-bottom: 1px solid rgba(48, 35, 82, 0.604);
+  color: #1a4d79;
 }
 .panel-user .panel-action .panel-box .box-body {
   display: flex;
@@ -320,7 +321,7 @@ main .login-wrapper .login form button {
   text-align: center;
   font-size: 3.5rem;
   width: 40%;
-  color: #e9e0e0;
+  color: #2373ba;
 }
 .panel-user .panel-action .panel-box .box-body p {
   width: 60%;
@@ -328,7 +329,7 @@ main .login-wrapper .login form button {
   font-family: "Quicksand";
   font-weight: lighter;
   padding-bottom: 1em;
-  color: #fff;
+  color: #1a4d79;
 }
 .panel-user .panel-action .panel-box .box-btn {
   display: flex;
@@ -343,15 +344,15 @@ main .login-wrapper .login form button {
   font-family: "Quicksand";
   font-weight: bold;
   padding: 1em;
-  border: 1px solid #ffffff;
-  color: #ffffff;
+  border: 1px solid #1a4d79;
+  color: #1a4d79;
   border-radius: 0px;
   background-color: transparent;
   cursor: pointer;
 }
 .panel-user .panel-action .panel-box .box-btn button:hover {
-  border: 1px solid #d8add8;
-  color: #d18bd1;
+  border: 1px solid #370637;
+  color: #410b41;
 }
 .panel-user .panel-action .movimientos {
   grid-column: 1/2;
@@ -436,6 +437,8 @@ main .login-wrapper .login form button {
 }
 .movimientos-wrapper .sidebar-body .sidebar-box form {
   display: flex;
+  flex-direction: column;
+  margin: 0.5em;
 }
 .movimientos-wrapper .sidebar-body .sidebar-box form .filtros {
   width: 70%;
@@ -444,6 +447,8 @@ main .login-wrapper .login form button {
   outline: none;
   cursor: pointer;
   line-height: 2;
+  background-color: #fff;
+  padding: 0.5em;
 }
 .movimientos-wrapper .sidebar-body .sidebar-box form button {
   width: 50%;
@@ -483,6 +488,8 @@ main .login-wrapper .login form button {
   width: auto;
 }
 .movimientos-wrapper .sidebar-body .badge {
+  display: block;
+  width: 100%;
   background-color: #9dff005d;
   font-family: "Quicksand";
   text-align: center;
@@ -547,6 +554,7 @@ main .login-wrapper .login form button {
   margin-top: 0.5em;
   font-size: 1rem;
   font-family: "Quicksand";
+  background-color: white;
 }
 .movimientos-wrapper .sidebar-body .movimientos-box.tabla table thead {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.296);
@@ -591,7 +599,7 @@ main .login-wrapper .login form button {
 .transacciones-wrapper .card-input {
   display: block;
   width: 100%;
-  background-color: lavender;
+  background-color: #e4dcdc;
 }
 .transacciones-wrapper .card-input:nth-child(2) {
   margin-top: 2em;
@@ -627,6 +635,14 @@ main .login-wrapper .login form button {
   font-size: 1rem;
   font-family: "Quicksand";
   color: #494141;
+}
+.transacciones-wrapper .card-input .card-body .warning {
+  display: block;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1rem;
+  background-color: rgba(255, 255, 0, 0.474);
+  margin: 1em;
+  padding: 1em;
 }
 .transacciones-wrapper .card-input .card-body .input-group {
   width: 100%;
@@ -955,44 +971,65 @@ main .login-wrapper .login form button {
   margin-bottom: 3em;
 }
 .sidebar-body .configuration-wrapper {
+  display: block;
+  width: 30%;
+  background-color: #d7d7e1;
   border: 1px solid rgba(107, 94, 94, 0.268);
-  box-shadow: inset 0px 0px 3px #656470;
-  border-radius: 15px;
+  box-shadow: inset 0px 0px 3px white;
 }
 .sidebar-body .configuration-wrapper .user-information-card {
-  padding: 1em;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  padding: 0.5em;
   min-width: 250px;
+}
+.sidebar-body .configuration-wrapper .user-information-card .fa-user-circle {
+  display: block;
+  width: 100%;
+  font-size: 3em;
+  text-align: center;
+  color: #ffffff;
+  text-align: center;
+  background-image: url(../assets/img/bg_user.jpg);
+  background-position: center;
+  background-size: cover;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
 }
 .sidebar-body .configuration-wrapper .user-information-card .information-card_header {
   width: 100%;
   text-align: right;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.2rem;
 }
-.sidebar-body .configuration-wrapper .user-information-card .fa-user-circle {
+.sidebar-body .configuration-wrapper .user-information-card .information-card_header a {
+  color: #13134b;
+}
+.sidebar-body .configuration-wrapper .user-information-card span {
+  display: block;
   width: 100%;
-  font-size: 5em;
-  text-align: center;
-}
-.sidebar-body .configuration-wrapper .user-information-card p {
   font-family: "Quicksand", sans-serif;
   text-align: center;
-  font-size: 1rem;
+  font-size: 0.7rem;
   font-weight: 600;
+  border: 1px solid rgba(15, 24, 73, 0.548);
+  padding-top: 1em;
+  padding-bottom: 1em;
+  color: #211c7b;
+  background-color: #fff;
+  margin-top: 1em;
 }
 .sidebar-body .configuration-wrapper .information-card_footer {
   width: 100%;
-  background-color: #0074d9;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
+  background-color: #271635;
 }
 .sidebar-body .configuration-wrapper .information-card_footer span {
   display: block;
   padding: 0.5em;
   font-family: "Quicksand", sans-serif;
   text-align: center;
-  color: #fff;
+  color: white;
   font-weight: 500;
   font-size: 1rem;
 }
@@ -1006,6 +1043,7 @@ main .login-wrapper .login form button {
 .movimientos-box .wrapper-contacts {
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
 }
 .movimientos-box .wrapper-contacts .card-contacto {
   display: flex;
@@ -1050,6 +1088,7 @@ main .login-wrapper .login form button {
   padding: 0.5em;
   gap: 0.5em;
   width: auto;
+  border-top: 5px solid #dfe1d4;
 }
 .movimientos-box .wrapper-contacts .card-information .icon {
   display: flex;

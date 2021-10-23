@@ -23,7 +23,7 @@ router.post("/adding", isAuth, async (req, res) => {
     } else {
       if (emailExist.email === req.user.email) {
         errors.push({
-          text: "No puedes depositarte a ti mismo, no seas lacra",
+          text: "No puedes depositarte a ti mismo, no seas tramposo",
         });
       }
     }

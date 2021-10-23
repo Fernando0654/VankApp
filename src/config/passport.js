@@ -11,7 +11,6 @@ passport.use(
       const user = await User.findOne({ email: email });
       if (!user) {
         // null porque no hay error, false para el user y mensaje
-        const errors = [];
         return done(null, false, {
           message: "Usuario o contraseña incorrectos",
         });
