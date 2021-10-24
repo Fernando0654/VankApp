@@ -85,6 +85,9 @@ header {
   background-color: #153b6d;
   box-shadow: 0px 0px 5px gray;
 }
+header .navbar-icon {
+  display: none;
+}
 header .logo-img {
   width: 50%;
   margin-left: 2em;
@@ -121,6 +124,76 @@ header .nav li a:hover {
   color: #8bb9e1;
 }
 
+@media (max-width: 1060px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: transparent;
+    box-shadow: none;
+    z-index: 4;
+  }
+  header .navbar-icon {
+    display: block;
+    position: absolute;
+    top: 5%;
+    right: 10%;
+    transform: translate(-5%, -10%);
+  }
+  header .logo-img {
+    margin-top: 2em;
+    width: auto;
+    margin-left: 0em;
+  }
+  header .logo-img h1 {
+    color: #1d1b1b;
+  }
+  header .logo-img h1 span {
+    display: block;
+    color: white;
+    background-color: #0074d9;
+  }
+  header .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    width: 90%;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    box-shadow: 0px 0px 5px #464141;
+    z-index: 5;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+  }
+  header .nav li {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  header .nav li a {
+    color: #1a1717;
+  }
+  header .nav li a:hover {
+    color: #8bb9e1;
+  }
+
+  .wrapper-layer {
+    display: none;
+    position: fixed;
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.747);
+    z-index: 1;
+  }
+}
 main {
   width: 100%;
 }
@@ -174,7 +247,6 @@ main .login-wrapper .login {
 }
 main .login-wrapper .login form {
   width: 100%;
-  min-height: 80vh;
   background-color: #082946;
   box-shadow: 0px 0px 10px black;
 }
@@ -262,6 +334,123 @@ main .login-wrapper .login form button {
   cursor: pointer;
 }
 
+@media (max-width: 1060px) {
+  main .login-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  main .login-wrapper .expo-info {
+    width: 90%;
+  }
+  main .login-wrapper .expo-info h1 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-top: 2em;
+  }
+  main .login-wrapper .expo-info p {
+    font-size: 1rem;
+    text-align: center;
+  }
+  main .login-wrapper .expo-info button {
+    margin: auto;
+  }
+  main .login-wrapper .expo-info button:hover {
+    background-color: blue;
+  }
+  main .login-wrapper .login {
+    width: 90%;
+  }
+  main .login-wrapper .login form {
+    width: 100%;
+    background-color: #082946;
+    box-shadow: 0px 0px 10px black;
+  }
+  main .login-wrapper .login form img {
+    width: 100%;
+    filter: blur(1px);
+  }
+  main .login-wrapper .login form h2 {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-family: "Quicksand", sans-serif;
+    font-size: 1.5rem;
+  }
+  main .login-wrapper .login form .input-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  main .login-wrapper .login form .input-box input[type=text],
+main .login-wrapper .login form .input-box input[type=password] {
+    width: 80%;
+    margin: 1em;
+    margin-bottom: 1.5em;
+    padding: 1em;
+    border: none;
+    border-bottom: 1px solid rgba(233, 224, 224, 0.583);
+    background-color: transparent;
+    color: #fff;
+    font-family: "Gemunu";
+    font-style: 1rem;
+  }
+  main .login-wrapper .login form .input-box input[type=text]:focus,
+main .login-wrapper .login form .input-box input[type=password]:focus {
+    outline: 1px solid #0074d9;
+  }
+  main .login-wrapper .login form .input-box .forgot {
+    font-size: 0.8rem;
+    color: #e7cece;
+    font-family: "Quicksand";
+  }
+  main .login-wrapper .login form .btn-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 1em;
+  }
+  main .login-wrapper .login form .btn-group button {
+    width: 35%;
+    margin: 1em;
+    font-family: "Quicksand", sans-serif;
+    border: none;
+    padding: 1em;
+    border-radius: 30px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  main .login-wrapper .login form .btn-group button:nth-child(1) {
+    background-color: #fff;
+    color: #000;
+  }
+  main .login-wrapper .login form .btn-group button:nth-child(2) {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+  }
+  main .login-wrapper .login form .btn-group button:hover {
+    font-weight: bold;
+  }
+  main .login-wrapper .login form button {
+    display: block;
+    padding: 1em;
+    font-family: "Quicksand", sans-serif;
+    background-color: #fff;
+    color: #000;
+    border-radius: 30px;
+    border: none;
+    margin: auto;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+    cursor: pointer;
+  }
+}
 .panel-user {
   background-image: url(../assets/img/bg_user_panel.jpg);
   background-position: center;
