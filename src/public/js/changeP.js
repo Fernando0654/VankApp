@@ -16,10 +16,17 @@ const enterOldPassword = document.getElementById("old_pass");
 const query = window.location.search;
 const urlParam = new URLSearchParams(query);
 const matchPassword = urlParam.get("p");
-if (matchPassword === "t") {
-  changePassword();
+localStorage.setItem("pass", matchPassword);
+if (localStorage.getItem("pass") === "null") {
+  console.log(localStorage.getItem("pass"))
 } else {
-  swal("Lo sentimos", "La contraseña no coincide", "error", { button: "Continuar" });
+  if (matchPassword === "t") {
+    changePassword();
+  } else {
+    swal("Lo sentimos", "La contraseña no coincide", "error", {
+      button: "Continuar",
+    });
+  }
 }
 enterOldPassword.addEventListener("keyup", async (e) => {
   window.location.href = `/verify/${e.target.value}`;

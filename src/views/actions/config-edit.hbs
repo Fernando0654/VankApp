@@ -4,7 +4,7 @@
       <h1>
         Configuración
         <a href="/panel">Inicio ></a>
-        <a href="#">Configuración ></a>
+        <a href="/configuracion">Configuración ></a>
         <a href="#">Editando</a>
       </h1>
     </div>
@@ -26,7 +26,7 @@
             Guardar cambios
             <i class="fa fa-pencil-square" aria-hidden="true"></i>
           </button>
-          <a href="#">Cancelar</a>
+          <a href="/configuracion">Cancelar</a>
         </div>
         <input
           type="text"
@@ -36,7 +36,7 @@
         />
         <i class="fa fa-user-circle" aria-hidden="true"></i>
         <input
-          type="text"
+          type="email"
           name="email"
           placeholder="Correo electrónico"
           value="{{email}}"
@@ -52,7 +52,7 @@
         <button type="button" id="change_password">Cambiar contraseña</button>
         <div class="change-password" style="display: none;">
           <input
-            type="text"
+            type="password"
             name="Oldpassword"
             id="old_pass"
             placeholder="Contraseña antigua"

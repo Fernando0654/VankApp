@@ -28,11 +28,9 @@
         width: 100%;
         font-size: 3em;
         text-align: center;
-        color: #ffffff;
+        color: #413535;
         text-align: center;
-        background-image: url(../assets/img/bg_user.jpg);
-        background-position: center;
-        background-size: cover;
+        background-color: lavender;
         padding-top: 0.5em;
         padding-bottom: 0.5em;
       }
@@ -41,11 +39,28 @@
         text-align: right;
         font-family: "Quicksand", sans-serif;
         font-size: 1.2rem;
+        button {
+          color: rgb(129, 129, 233);
+          padding: 0.5em;
+          border: 1px solid blue;
+          background-color: transparent;
+          cursor: pointer;
+          transition: 0.5s ease;
+          &:hover {
+            background-color: #0074d9;
+            color: #fff;
+          }
+        }
         a {
-          color: rgb(19, 19, 75);
+          display: block;
+          font-size: 1rem;
+          color: red;
         }
       }
-      span {
+      span,
+      input[type="text"],
+      input[type="email"],
+      input[type="password"] {
         display: block;
         width: 100%;
         font-family: "Quicksand", sans-serif;
@@ -58,6 +73,28 @@
         color: rgb(33, 28, 123);
         background-color: #fff;
         margin-top: 1em;
+        outline: none;
+      }
+      button {
+        display: block;
+        padding: 1em;
+        background-color: transparent;
+        color: #0074d9;
+        width: 100%;
+        border: 1px solid #0074d9;
+        margin-top: 2em;
+        cursor: pointer;
+        transition: 0.5s ease; 
+        &:hover {
+          background-color: rgb(20, 20, 87);
+          color: #fff;
+        }
+      }
+      .change-password {
+        width: 100%;
+        .loading {
+          display: none;
+        }
       }
     }
     .information-card_footer {
@@ -132,7 +169,7 @@
       padding: 0.5em;
       gap: 0.5em;
       width: auto;
-      border-top: 5px solid rgb(223, 225, 212);
+      border-top: 5px solid rgb(14, 121, 170);
       .icon {
         display: flex;
         flex-direction: column;

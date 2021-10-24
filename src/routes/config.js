@@ -65,6 +65,7 @@ router.put("/configuracion/editar/:id", isAuth, async (req, res) => {
     age,
     phone,
   });
+  req.flash('success_msg', "Datos actualizados con éxito");
   res.redirect("/configuracion");
 });
 
@@ -89,6 +90,7 @@ router.get("/changePassword/:newPassword", isAuth, async(req, res) => {
   await User.findByIdAndUpdate(req.user._id, {
     password: newPassword
   });
+  res.redirect('/logout');
 })
 
 module.exports = router;

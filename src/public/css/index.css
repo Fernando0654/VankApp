@@ -989,11 +989,9 @@ main .login-wrapper .login form button {
   width: 100%;
   font-size: 3em;
   text-align: center;
-  color: #ffffff;
+  color: #413535;
   text-align: center;
-  background-image: url(../assets/img/bg_user.jpg);
-  background-position: center;
-  background-size: cover;
+  background-color: lavender;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
 }
@@ -1003,10 +1001,27 @@ main .login-wrapper .login form button {
   font-family: "Quicksand", sans-serif;
   font-size: 1.2rem;
 }
-.sidebar-body .configuration-wrapper .user-information-card .information-card_header a {
-  color: #13134b;
+.sidebar-body .configuration-wrapper .user-information-card .information-card_header button {
+  color: #8181e9;
+  padding: 0.5em;
+  border: 1px solid blue;
+  background-color: transparent;
+  cursor: pointer;
+  transition: 0.5s ease;
 }
-.sidebar-body .configuration-wrapper .user-information-card span {
+.sidebar-body .configuration-wrapper .user-information-card .information-card_header button:hover {
+  background-color: #0074d9;
+  color: #fff;
+}
+.sidebar-body .configuration-wrapper .user-information-card .information-card_header a {
+  display: block;
+  font-size: 1rem;
+  color: red;
+}
+.sidebar-body .configuration-wrapper .user-information-card span,
+.sidebar-body .configuration-wrapper .user-information-card input[type=text],
+.sidebar-body .configuration-wrapper .user-information-card input[type=email],
+.sidebar-body .configuration-wrapper .user-information-card input[type=password] {
   display: block;
   width: 100%;
   font-family: "Quicksand", sans-serif;
@@ -1019,6 +1034,28 @@ main .login-wrapper .login form button {
   color: #211c7b;
   background-color: #fff;
   margin-top: 1em;
+  outline: none;
+}
+.sidebar-body .configuration-wrapper .user-information-card button {
+  display: block;
+  padding: 1em;
+  background-color: transparent;
+  color: #0074d9;
+  width: 100%;
+  border: 1px solid #0074d9;
+  margin-top: 2em;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+.sidebar-body .configuration-wrapper .user-information-card button:hover {
+  background-color: #141457;
+  color: #fff;
+}
+.sidebar-body .configuration-wrapper .user-information-card .change-password {
+  width: 100%;
+}
+.sidebar-body .configuration-wrapper .user-information-card .change-password .loading {
+  display: none;
 }
 .sidebar-body .configuration-wrapper .information-card_footer {
   width: 100%;
@@ -1088,7 +1125,7 @@ main .login-wrapper .login form button {
   padding: 0.5em;
   gap: 0.5em;
   width: auto;
-  border-top: 5px solid #dfe1d4;
+  border-top: 5px solid #0e79aa;
 }
 .movimientos-box .wrapper-contacts .card-information .icon {
   display: flex;
