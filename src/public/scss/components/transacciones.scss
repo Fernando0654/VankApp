@@ -97,3 +97,15 @@
     }
   }
 }
+
+@media (max-width: 1060px) {
+  .transacciones-wrapper {
+    .sidebar-body:nth-child(2) {
+      width: 100%;
+    }
+    .sidebar-body .sidebar-box h2 {
+      margin: 0;
+    }
+  }
+  
+}

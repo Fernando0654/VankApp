@@ -7,10 +7,6 @@
         <a href="#">Movimientos</a>
       </h1>
     </div>
-    <div class="change-lang">
-      <i class="fa fa-language" aria-hidden="true"></i>
-      <span>Idioma: Es</span>
-    </div>
   </div>
   <div class="sidebar-body">
     <div class="sidebar-box">
@@ -36,7 +32,7 @@
       </div>
     </div>
     <div class="movimientos-box tabla">
-      <table id="historial">
+      <table>
         {{#if movimientos }}
                 <thead>
           <tr>
@@ -84,6 +80,24 @@
           {{/each}}
         </tbody>
       </table>
+      {{#each movimientos}}
+      <div class="movement-card">
+        <div class="movement-card_header">
+          <p class="concepto">{{concepto}} • {{fecha}}</p>
+        </div>
+        <div class="movement-card_body">
+          <p class="cantidad">{{cantidad}} $</p>
+        </div>
+        <div class="movement-card_footer">
+          <p class="tipo">{{tipo}} a/de {{correo}}</p>
+        </div>
+        <div class="movement-card_btn">
+          <a href="#">
+          <i class="fa fa-chevron-right" aria-hidden="true"></i>
+        </a>
+        </div>
+      </div>
+      {{/each}}
     </div>
   </div>
 </div>

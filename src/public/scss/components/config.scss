@@ -215,3 +215,19 @@
     cursor: pointer;
   }
 }
+
+@media (max-width: 1060px) {
+  .sidebar-body {
+    .configuration-wrapper {
+      display: block;
+      width: 90%;
+    }
+  }
+  
+  .movimientos-box {
+    button {
+      display: block;
+      width: 60%;
+    }
+  }
+}

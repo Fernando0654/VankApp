@@ -480,8 +480,8 @@ main .login-wrapper .login form .input-box input[type=password]:focus {
   max-width: 1000px;
   margin: auto;
   display: grid;
-  grid-template-columns: repeat(2);
-  grid-template-rows: repeat(2);
+  grid-template-columns: repeat(2fr);
+  grid-template-rows: repeat(2fr);
   gap: 1.5em;
 }
 .panel-user .panel-action .panel-box {
@@ -560,6 +560,45 @@ main .login-wrapper .login form .input-box input[type=password]:focus {
   grid-row: 2/2;
 }
 
+@media (max-width: 1060px) {
+  .panel-user {
+    width: 100%;
+  }
+  .panel-user .panel-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    max-width: 1000px;
+    margin: auto;
+  }
+  .panel-user .panel-header h1 {
+    width: 100%;
+    text-align: left;
+    font-family: "Quicksand";
+    font-size: 1rem;
+    font-weight: lighter;
+    color: black;
+  }
+  .panel-user .panel-action .movimientos {
+    grid-column: 1/1;
+    grid-row: 1/1;
+  }
+  .panel-user .panel-action .transacciones {
+    grid-column: 1/1;
+    grid-row: 2/2;
+  }
+  .panel-user .panel-action .configuracion {
+    grid-column: 1/1;
+    grid-row: 3/3;
+  }
+  .panel-user .panel-action .contactos {
+    grid-column: 1/1;
+    grid-row: 4/4;
+    margin-bottom: 2em;
+  }
+}
 .movimientos-wrapper {
   width: 95%;
   max-width: 1000px;
@@ -592,10 +631,6 @@ main .login-wrapper .login form .input-box input[type=password]:focus {
 }
 .movimientos-wrapper .component-header .component-route.movimientos-route h1 {
   border-left: 7px solid red;
-}
-.movimientos-wrapper .component-header .change-lang {
-  width: 12%;
-  color: #000;
 }
 .movimientos-wrapper .sidebar-body {
   display: flex;
@@ -691,6 +726,9 @@ main .login-wrapper .login form .input-box input[type=password]:focus {
 .movimientos-wrapper .sidebar-body .badge a {
   font-size: 1rem;
 }
+.movimientos-wrapper .sidebar-body .movement-card {
+  display: none;
+}
 .movimientos-wrapper .sidebar-body.tabla table {
   table-layout: fixed;
   border-collapse: collapse;
@@ -779,6 +817,94 @@ main .login-wrapper .login form .input-box input[type=password]:focus {
   padding: 1em;
 }
 
+@media (max-width: 1060px) {
+  .movimientos-wrapper .component-header .component-route h1 a {
+    display: block;
+  }
+  .movimientos-wrapper .sidebar-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .movimientos-wrapper .sidebar-body .sidebar-box {
+    width: 90%;
+  }
+  .movimientos-wrapper .sidebar-body:nth-child(1) {
+    width: 90%;
+  }
+  .movimientos-wrapper .sidebar-body:nth-child(2) {
+    width: 90%;
+  }
+  .movimientos-wrapper .sidebar-body .movement-card {
+    display: grid;
+    font-family: "Quicksand", sans-serif;
+    font-size: 0.8rem;
+    width: 100%;
+    border: 1px solid rgba(126, 112, 112, 0.433);
+    padding: 0.5em;
+  }
+  .movimientos-wrapper .sidebar-body .movement-card .movement-card_header {
+    grid-column: 1/2;
+  }
+  .movimientos-wrapper .sidebar-body .movement-card .movement-card_header .concepto {
+    width: 70%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-weight: bold;
+    color: #554040;
+    margin: 0.3em;
+  }
+  .movimientos-wrapper .sidebar-body .movement-card .movement-card_body {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .movimientos-wrapper .sidebar-body .movement-card .movement-card_body .cantidad {
+    width: 40%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-weight: bold;
+    color: #53149b;
+    margin: 0.3em;
+  }
+  .movimientos-wrapper .sidebar-body .movement-card .movement-card_footer {
+    grid-column: 1/2;
+    grid-row: 3/3;
+  }
+  .movimientos-wrapper .sidebar-body .movement-card .movement-card_footer .tipo {
+    width: 70%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-weight: bold;
+    color: black;
+    margin: 0.3em;
+  }
+  .movimientos-wrapper .sidebar-body .movement-card .movement-card_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 2/2;
+    grid-row: 3/3;
+    grid-row: span 3;
+    width: 25%;
+  }
+  .movimientos-wrapper .sidebar-body .movement-card .movement-card_btn a {
+    display: block;
+    padding: 0.5em;
+  }
+  .movimientos-wrapper .movimientos-box:nth-child(1) {
+    width: 90%;
+  }
+  .movimientos-wrapper .movimientos-box:nth-child(2) {
+    width: 85% !important;
+  }
+  .movimientos-wrapper .movimientos-box.tabla table {
+    display: none;
+  }
+}
 .transacciones-wrapper .component-header .component-route.transacciones-route {
   width: 85%;
 }
@@ -875,6 +1001,14 @@ main .login-wrapper .login form .input-box input[type=password]:focus {
   line-height: 2;
 }
 
+@media (max-width: 1060px) {
+  .transacciones-wrapper .sidebar-body:nth-child(2) {
+    width: 100%;
+  }
+  .transacciones-wrapper .sidebar-body .sidebar-box h2 {
+    margin: 0;
+  }
+}
 .cartera-wrapper .component-header .component-route.cartera-route {
   width: 85%;
 }
@@ -1375,6 +1509,17 @@ main .login-wrapper .login form .input-box input[type=password]:focus {
   cursor: pointer;
 }
 
+@media (max-width: 1060px) {
+  .sidebar-body .configuration-wrapper {
+    display: block;
+    width: 90%;
+  }
+
+  .movimientos-box button {
+    display: block;
+    width: 60%;
+  }
+}
 .errors-wrapper {
   display: flex;
   flex-direction: column;
