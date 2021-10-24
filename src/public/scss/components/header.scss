@@ -11,7 +11,7 @@ header {
     display: none;
   }
   .logo-img {
-    width: 50%;
+    width: 35%;
     margin-left: 2em;
     h1 {
       font-family: "Geo";
@@ -28,7 +28,7 @@ header {
   }
   .nav {
     @include mix.displayHorizontal;
-    width: 45%;
+    width: 55%;
     justify-content: end;
     margin-right: 2em;
     li a {

@@ -89,7 +89,7 @@ header .navbar-icon {
   display: none;
 }
 header .logo-img {
-  width: 50%;
+  width: 35%;
   margin-left: 2em;
 }
 header .logo-img h1 {
@@ -109,7 +109,7 @@ header .nav {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: 45%;
+  width: 55%;
   justify-content: end;
   margin-right: 2em;
 }
@@ -1556,6 +1556,33 @@ main .login-wrapper .login form .input-box input[type=password]:focus {
   to {
     right: -100%;
   }
+}
+.content {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 2em;
+}
+.content h1, .content h2, .content h3 {
+  text-align: center;
+  font-family: "Gemunu", cursive;
+}
+.content p {
+  font-size: 1.2rem;
+  line-height: 2;
+  font-family: "Quicksand", sans-serif;
+}
+.content .content-box {
+  display: block;
+  padding: 1em;
+  background-color: lavender;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.2rem;
+  line-height: 2;
+}
+.content .content-box li, .content .content-box ol {
+  list-style: square;
+  padding: 0.5em;
+  font-size: 1.2rem;
 }
 
 /*# sourceMappingURL=index.css.map */

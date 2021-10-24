@@ -67,6 +67,7 @@ app.use(require("./routes/movements"));
 app.use(require("./routes/users"));
 app.use(require("./routes/contactos"));
 app.use(require("./routes/config"));
+app.use(require("./routes/static"));
 
 // Archivos estáticos
 

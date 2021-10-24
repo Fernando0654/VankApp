@@ -9,21 +9,29 @@
   <ul class="nav">
     {{#if user}}
       <li>
-        <a href="/logout"><i class="fa fa-user" aria-hidden="true"></i>
+        <a href="/logout">
+        <i class="fa fa-sign-out" aria-hidden="true"></i>
           CERRAR SESIÓN</a>
       </li>
     {{else}}
       <li>
+        <a href="/"><i class="fa fa-home" aria-hidden="true"></i> Inicio</a>
+      </li>
+      <li>
         <a href="/about">Sobre nosotros</a>
       </li>
       <li>
-        <a href="/help/how">¿Cómo funciona?</a>
+        <a href="/docs"><i class="fa fa-info-circle" aria-hidden="true"></i>
+          ¿Cómo funciona?</a>
       </li>
       <li>
         <a href="/help">Ayuda</a>
       </li>
       <li>
-        <a href="/signup">Crear una cuenta</a>
+        <a href="/signup">
+        <i class="fa fa-sign-in" aria-hidden="true"></i>
+        Crear una cuenta
+        </a>
       </li>
     {{/if}}
   </ul>
