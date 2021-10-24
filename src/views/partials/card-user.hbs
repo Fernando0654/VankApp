@@ -1,10 +1,12 @@
 <div class="configuration-wrapper">
   <div class="user-information-card">
     <div class="information-card_header">
-      <a href="/edit/config">
+     <form action="/configuracion/editar/{{_id}}" method="GET">
+        <button type="submit">
         Editar
         <i class="fa fa-pencil-square" aria-hidden="true"></i>
-      </a>
+      </button>
+     </form>
     </div>
     <span><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp; {{name}}</span>
     <i class="fa fa-user-circle" aria-hidden="true"></i>

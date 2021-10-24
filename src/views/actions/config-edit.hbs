@@ -1,0 +1,69 @@
+<div class="movimientos-wrapper transacciones-wrapper">
+  <div class="component-header">
+    <div class="component-route config-route">
+      <h1>
+        Configuración
+        <a href="/panel">Inicio ></a>
+        <a href="#">Configuración ></a>
+        <a href="#">Editando</a>
+      </h1>
+    </div>
+    <div class="change-lang">
+      <i class="fa fa-language" aria-hidden="true"></i>
+      <span>Idioma: Es</span>
+    </div>
+  </div>
+  <form
+    action="/configuracion/editar/{{_id}}?_method=PUT"
+    method="POST"
+    class="sidebar-body"
+  >
+    <div class="configuration-wrapper">
+      <div class="user-information-card">
+        <div class="information-card_header">
+          <input type="hidden" name="_method" value="PUT" />
+          <button type="submit">
+            Guardar cambios
+            <i class="fa fa-pencil-square" aria-hidden="true"></i>
+          </button>
+          <a href="#">Cancelar</a>
+        </div>
+        <input
+          type="text"
+          name="name"
+          placeholder="Nombre completo"
+          value="{{name}}"
+        />
+        <i class="fa fa-user-circle" aria-hidden="true"></i>
+        <input
+          type="text"
+          name="email"
+          placeholder="Correo electrónico"
+          value="{{email}}"
+        />
+        <input
+          type="text"
+          name="phone"
+          class="phone"
+          placeholder="Correo electrónico"
+          value="{{phone}}"
+        />
+        <input type="text" name="age" placeholder="Edad" value="{{age}}" />
+        <button type="button" id="change_password">Cambiar contraseña</button>
+        <div class="change-password" style="display: none;">
+          <input
+            type="text"
+            name="Oldpassword"
+            id="old_pass"
+            placeholder="Contraseña antigua"
+          />
+        </div>
+      </div>
+      <div class="information-card_footer">
+        <span>Saldo: {{saldo}} $</span>
+      </div>
+    </div>
+  </form>
+</div>
+
+<script src="/js/changeP.js"></script>
