@@ -2,8 +2,7 @@
 @use "../util/mixins" as mix;
 
 .signup-wrapper {
-  background: 
-    url(../assets/img/bg_signup.jpg);
+  background: url(../assets/img/bg_signup.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -178,6 +177,23 @@
           color: #b4d1eb;
         }
       }
+    }
+  }
+}
+
+@media (max-width: 1060px) {
+  .signup-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: url(../assets/img/bg_signup.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    form {
+      display: block;
+      width: 80%;
     }
   }
 }
