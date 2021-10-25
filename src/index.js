@@ -4,12 +4,12 @@ const exphbs = require("express-handlebars");
 const methodOver = require("method-override");
 const session = require("express-session");
 const flash = require("connect-flash");
-const passport = require('passport');
+const passport = require("passport");
 
 // Inicialización
 const app = express();
 require("./db");
-require('./config/passport');
+require("./config/passport");
 
 // Settings
 app.set("port", process.env.PORT || 3000);
@@ -47,17 +47,20 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
 
+var favicon = require('serve-favicon');
+
+app.use(favicon(__dirname + '/public/favicon.ico'));
 
 // Variables globales ########################3
 
 app.use((req, res, next) => {
-  res.locals.success_msg = req.flash('success_msg');
-  res.locals.error_msg = req.flash('error_msg');
-  res.locals.error = req.flash('error');
+  res.locals.success_msg = req.flash("success_msg");
+  res.locals.error_msg = req.flash("error_msg");
+  res.locals.error = req.flash("error");
   res.locals.user = req.user || null;
   res.locals.saldo = req.saldo;
   next();
-})
+});
 
 // Rutas
 
@@ -77,4 +80,8 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.listen(app.get("port"), () => {
   console.log("Server on port: ", app.get("port"));
+});
+
+app.use(function(req, res, next){
+  res.status(404).render('404', {title: "Sorry, page not found"});
 });
