@@ -48,8 +48,7 @@ app.use(passport.session());
 app.use(flash());
 
 var favicon = require('serve-favicon');
-
-app.use(favicon(__dirname + '/public/favicon.ico'));
+app.use(favicon(__dirname + '/public/favicon1.ico'));
 
 // Variables globales ########################3
 

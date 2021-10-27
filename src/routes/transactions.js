@@ -28,6 +28,12 @@ router.post("/adding", isAuth, async (req, res) => {
       }
     }
   }
+  if (cantidad <= 0) {
+    errors.push({ text: "La cantidad debe ser mayor a cero" });
+  }
+  if (req.user.saldo <= 0 || req.user.saldo < cantidad) {
+    errors.push({ text: "Saldo insuficiente" });
+  }
   if (!concepto) {
     errors.push({ text: "Por favor, introduce un concepto" });
   }
@@ -68,7 +74,6 @@ router.post("/adding", isAuth, async (req, res) => {
       tipo: "Recibido",
       fecha,
     });
-    // `doc` is the document _before_ `update` was applied
     await User.findOneAndUpdate(filtroDestino, actualizaDestino); // Saldo del remitente
     await User.findOneAndUpdate(filtroRemitente, actualizaRemitente); // Saldo del destinatario
     transaccionRemitente.user = req.user.id;

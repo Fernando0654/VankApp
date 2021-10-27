@@ -39,6 +39,9 @@ router.post("/signup", async (req, res) => {
   if (password.length <= 5) {
     errors.push({ text: "La contraseña debe ser mayor a 5 caracteres" });
   }
+  if(numero < 16) {
+    errors.push({text: "Esta tarjeta es inválida"})
+  }
   if (errors.length > 0) {
     res.render("signup", {
       errors,

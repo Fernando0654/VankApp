@@ -963,6 +963,7 @@ main .login-wrapper .login form .input-box input[type=password]:focus {
   width: 100%;
 }
 .transacciones-wrapper .card-input .card-body .input-group input[type=text],
+.transacciones-wrapper .card-input .card-body .input-group input[type=number],
 .transacciones-wrapper .card-input .card-body .input-group input[type=email],
 .transacciones-wrapper .card-input .card-body .input-group input[type=submit] {
   padding: 1em;
@@ -974,6 +975,7 @@ main .login-wrapper .login form .input-box input[type=password]:focus {
   font-weight: lighter;
 }
 .transacciones-wrapper .card-input .card-body .input-group input[type=text]:focus,
+.transacciones-wrapper .card-input .card-body .input-group input[type=number]:focus,
 .transacciones-wrapper .card-input .card-body .input-group input[type=email]:focus,
 .transacciones-wrapper .card-input .card-body .input-group input[type=submit]:focus {
   border: 1px solid #0074d9;
