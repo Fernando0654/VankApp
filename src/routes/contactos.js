@@ -21,7 +21,7 @@ router.get("/agregar/:email", isAuth, async (req, res) => {
   const emailExist = await User.findOne({ email: req.params.email });
   if (!emailExist) {
     req.flash("error_msg", "Este usuario no existe :(");
-    res.redirect("/configuracion");
+    res.redirect("/contactos");
     return;
   } else {
     const belongTo = req.user.email;
