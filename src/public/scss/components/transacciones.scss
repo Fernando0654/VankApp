@@ -1,112 +1,110 @@
 @use "../util/colors" as colors;
 @use "../util/mixins" as mix;
-
 .transacciones-wrapper {
-  .component-header {
-    .component-route {
-      &.transacciones-route {
-        width: 85%;
-        h1 {
-          border-left: 7px solid colors.$transacciones;
+    .component-header {
+        .component-route {
+            &.transacciones-route {
+                width: 100%;
+                h1 {
+                    border-left: 7px solid colors.$transacciones;
+                }
+            }
         }
-      }
     }
-  }
-  .card-input {
-    display: block;
-    width: 100%;
-    background-color: rgb(228, 220, 220);
-    &:nth-child(2) {
-        margin-top: 2em;
-        margin-bottom: 2em
-    }
-    .card-header {
-      @include mix.displayHorizontal;
-      width: 100%;
-      font-family: "Quicksand";
-      background-color: #fff;
-      box-shadow: 0px -2px 5px rgba(38, 36, 36, 0.35);
-      cursor: pointer;
-      h1 {
-        width: 75%;
-        font-size: 1.5rem;
-        text-align: left;
-      }
-      .fa-chevron-down {
-        text-align: right;
-        width: 20%;
-      }
-    }
-    .card-body {
-      border: 1px solid rgba(153, 131, 131, 0.282);
-      padding: 1em;
-      p {
-        width: 100%;
-        margin: auto;
-        font-size: 1rem;
-        font-family: "Quicksand";
-        color: rgb(73, 65, 65);
-      }
-      .warning {
+    .card-input {
         display: block;
-        font-family: "Quicksand", sans-serif;
-        font-size: 1rem;
-        background-color: rgba(255, 255, 0, 0.474);
-        margin: 1em;
-        padding: 1em;
-      }
-      .input-group {
         width: 100%;
-        input[type="text"],
-        input[type="number"],
-        input[type="email"],
-        input[type="submit"] {
-            padding: 1em;
-            border: 1px solid rgba(153, 131, 131, 0.282);
-            margin: 1em;
-            margin-left: 0;
-            outline: none;
+        background-color: rgb(228, 220, 220);
+        &:nth-child(2) {
+            margin-top: 2em;
+            margin-bottom: 2em
+        }
+        .card-header {
+            @include mix.displayHorizontal;
+            width: 100%;
             font-family: "Quicksand";
-            font-weight: lighter;
-            &:focus {
-                border: 1px solid #0074d9;
-            }
-        }
-        input[type="email"] {
-            width: 90%;
-            margin: auto;
-            margin-top: 1em;
-        }
-        input[type="submit"] {
-            background-color: colors.$blue_button;
-            color: #fff;
+            background-color: #fff;
+            box-shadow: 0px -2px 5px rgba(38, 36, 36, 0.35);
             cursor: pointer;
-            &:hover {
-                background-color: #0074d9;
+            h1 {
+                width: 75%;
+                font-size: 1.5rem;
+                text-align: left;
+            }
+            .fa-chevron-down {
+                text-align: right;
+                width: 20%;
             }
         }
-        select {
-          display: block;
-          margin-top: 1em;
-          width: 90%;
-          padding: 0.5em;
-          font-family: "Quicksand", sans-serif;
-          outline: none;
-          line-height: 2;
+        .card-body {
+            border: 1px solid rgba(153, 131, 131, 0.282);
+            padding: 1em;
+            p {
+                width: 100%;
+                margin: auto;
+                font-size: 1rem;
+                font-family: "Quicksand";
+                color: rgb(73, 65, 65);
+            }
+            .warning {
+                display: block;
+                font-family: "Quicksand", sans-serif;
+                font-size: 1rem;
+                background-color: rgba(255, 255, 0, 0.474);
+                margin: 1em;
+                padding: 1em;
+            }
+            .input-group {
+                width: 100%;
+                input[type="text"],
+                input[type="number"],
+                input[type="email"],
+                input[type="submit"] {
+                    padding: 1em;
+                    border: 1px solid rgba(153, 131, 131, 0.282);
+                    margin: 1em;
+                    margin-left: 0;
+                    outline: none;
+                    font-family: "Quicksand";
+                    font-weight: lighter;
+                    &:focus {
+                        border: 1px solid #0074d9;
+                    }
+                }
+                input[type="email"] {
+                    width: 90%;
+                    margin: auto;
+                    margin-top: 1em;
+                }
+                input[type="submit"] {
+                    background-color: colors.$blue_button;
+                    color: #fff;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: #0074d9;
+                    }
+                }
+                select {
+                    display: block;
+                    margin-top: 1em;
+                    width: 90%;
+                    padding: 0.5em;
+                    font-family: "Quicksand", sans-serif;
+                    outline: none;
+                    line-height: 2;
+                }
+            }
         }
-      }
     }
-  }
 }
 
 @media (max-width: 1060px) {
-  .transacciones-wrapper {
-    .sidebar-body:nth-child(2) {
-      width: 100%;
+    .transacciones-wrapper {
+        .sidebar-body:nth-child(2) {
+            width: 100%;
+        }
+        .sidebar-body .sidebar-box h2 {
+            margin: 0;
+        }
     }
-    .sidebar-body .sidebar-box h2 {
-      margin: 0;
-    }
-  }
-  
 }

@@ -1,233 +1,232 @@
 .component-header {
-  .component-route {
-    &.config-route {
-      width: 85%;
-      h1 {
-        border-left: 7px solid #000;
-      }
+    .component-route {
+        &.config-route {
+            width: 100%;
+            h1 {
+                border-left: 7px solid #000;
+            }
+        }
     }
-  }
 }
 
 .sidebar-body {
-  margin-bottom: 3em;
-  .configuration-wrapper {
-    display: block;
-    width: 30%;
-    background-color: #d7d7e1;
-    border: 1px solid rgba(107, 94, 94, 0.268);
-    box-shadow: inset 0px 0px 3px rgb(255, 255, 255);
-    .user-information-card {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 0.5em;
-      min-width: 250px;
-      .fa-user-circle {
+    margin-bottom: 3em;
+    .configuration-wrapper {
         display: block;
-        width: 100%;
-        font-size: 3em;
-        text-align: center;
-        color: #413535;
-        text-align: center;
-        background-color: lavender;
-        padding-top: 0.5em;
-        padding-bottom: 0.5em;
-      }
-      .information-card_header {
-        width: 100%;
-        text-align: right;
-        font-family: "Quicksand", sans-serif;
-        font-size: 1.2rem;
-        button {
-          color: rgb(129, 129, 233);
-          padding: 0.5em;
-          border: 1px solid blue;
-          background-color: transparent;
-          cursor: pointer;
-          transition: 0.5s ease;
-          &:hover {
-            background-color: #0074d9;
-            color: #fff;
-          }
+        width: 30%;
+        background-color: #d7d7e1;
+        border: 1px solid rgba(107, 94, 94, 0.268);
+        box-shadow: inset 0px 0px 3px rgb(255, 255, 255);
+        .user-information-card {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0.5em;
+            min-width: 250px;
+            .fa-user-circle {
+                display: block;
+                width: 100%;
+                font-size: 3em;
+                text-align: center;
+                color: #413535;
+                text-align: center;
+                background-color: lavender;
+                padding-top: 0.5em;
+                padding-bottom: 0.5em;
+            }
+            .information-card_header {
+                width: 100%;
+                text-align: right;
+                font-family: "Quicksand", sans-serif;
+                font-size: 1.2rem;
+                button {
+                    color: rgb(129, 129, 233);
+                    padding: 0.5em;
+                    border: 1px solid blue;
+                    background-color: transparent;
+                    cursor: pointer;
+                    transition: 0.5s ease;
+                    &:hover {
+                        background-color: #0074d9;
+                        color: #fff;
+                    }
+                }
+                a {
+                    display: block;
+                    font-size: 1rem;
+                    color: red;
+                }
+            }
+            span,
+            input[type="text"],
+            input[type="email"],
+            input[type="password"] {
+                display: block;
+                width: 100%;
+                font-family: "Quicksand", sans-serif;
+                text-align: center;
+                font-size: 0.7rem;
+                font-weight: 600;
+                border: 1px solid rgba(15, 24, 73, 0.548);
+                padding-top: 1em;
+                padding-bottom: 1em;
+                color: rgb(33, 28, 123);
+                background-color: #fff;
+                margin-top: 1em;
+                outline: none;
+            }
+            button {
+                display: block;
+                padding: 1em;
+                background-color: transparent;
+                color: #0074d9;
+                width: 100%;
+                border: 1px solid #0074d9;
+                margin-top: 2em;
+                cursor: pointer;
+                transition: 0.5s ease;
+                &:hover {
+                    background-color: rgb(20, 20, 87);
+                    color: #fff;
+                }
+            }
+            .change-password {
+                width: 100%;
+                .loading {
+                    display: none;
+                }
+            }
         }
-        a {
-          display: block;
-          font-size: 1rem;
-          color: red;
+        .information-card_footer {
+            width: 100%;
+            background-color: #271635;
+            span {
+                display: block;
+                padding: 0.5em;
+                font-family: "Quicksand", sans-serif;
+                text-align: center;
+                color: rgb(255, 255, 255);
+                font-weight: 500;
+                font-size: 1rem;
+            }
         }
-      }
-      span,
-      input[type="text"],
-      input[type="email"],
-      input[type="password"] {
-        display: block;
-        width: 100%;
-        font-family: "Quicksand", sans-serif;
-        text-align: center;
-        font-size: 0.7rem;
-        font-weight: 600;
-        border: 1px solid rgba(15, 24, 73, 0.548);
-        padding-top: 1em;
-        padding-bottom: 1em;
-        color: rgb(33, 28, 123);
-        background-color: #fff;
-        margin-top: 1em;
-        outline: none;
-      }
-      button {
-        display: block;
-        padding: 1em;
-        background-color: transparent;
-        color: #0074d9;
-        width: 100%;
-        border: 1px solid #0074d9;
-        margin-top: 2em;
-        cursor: pointer;
-        transition: 0.5s ease; 
-        &:hover {
-          background-color: rgb(20, 20, 87);
-          color: #fff;
-        }
-      }
-      .change-password {
-        width: 100%;
-        .loading {
-          display: none;
-        }
-      }
     }
-    .information-card_footer {
-      width: 100%;
-      background-color: #271635;
-      span {
-        display: block;
-        padding: 0.5em;
-        font-family: "Quicksand", sans-serif;
-        text-align: center;
-        color: rgb(255, 255, 255);
-        font-weight: 500;
-        font-size: 1rem;
-      }
-    }
-  }
 }
 
 .movimientos-box {
-  .title-contactos {
-    width: 100%;
-    text-align: center;
-    font-family: "Gemunu";
-    font-weight: lighter;
-  }
-  .wrapper-contacts {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    .card-contacto {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      padding: 0.5em;
-      margin: 1em;
-      background-color: rgb(29, 29, 82);
-      box-shadow: 0px 0px 10px gray;
-      .fa-user {
-        display: block;
-        padding: 0.5em;
-        font-size: 1.5rem;
-        color: rgba(255, 255, 255, 0.85);
-      }
-      span {
-        font-family: "Quicksand";
-        padding: 0.5em;
-        font-size: 1rem;
-        color: #fff;
-      }
-      form {
-        button {
-          color: rgb(255, 0, 0);
-          padding: 0;
-          margin: 0;
-          margin-top: 1.5em;
-          border: none;
-          &:hover {
-            color: rgb(197, 27, 27);
-          }
-        }
-      }
+    .title-contactos {
+        width: 100%;
+        text-align: center;
+        font-family: "Gemunu";
+        font-weight: lighter;
     }
-    .card-information {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      background-color: #141237;
-      box-shadow: 0px 0px 1px blue;
-      padding: 0.5em;
-      gap: 0.5em;
-      width: auto;
-      border-top: 5px solid rgb(14, 121, 170);
-      .icon {
+    .wrapper-contacts {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 25%;
-        .icon-inner {
-          width: 100%;
-          text-align: center;
-          font-size: 3rem;
-          color: #fff;
+        flex-wrap: wrap;
+        width: 100%;
+        .card-contacto {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            padding: 0.5em;
+            margin: 1em;
+            background-color: rgb(29, 29, 82);
+            box-shadow: 0px 0px 10px gray;
+            .fa-user {
+                display: block;
+                padding: 0.5em;
+                font-size: 1.5rem;
+                color: rgba(255, 255, 255, 0.85);
+            }
+            span {
+                font-family: "Quicksand";
+                padding: 0.5em;
+                font-size: 1rem;
+                color: #fff;
+            }
+            form {
+                button {
+                    color: rgb(255, 0, 0);
+                    padding: 0;
+                    margin: 0;
+                    margin-top: 1.5em;
+                    border: none;
+                    &:hover {
+                        color: rgb(197, 27, 27);
+                    }
+                }
+            }
         }
-        span {
-          display: block;
-          width: 100%;
-          font-size: 0.8rem;
-          font-family: "Quicksand", sans-serif;
-          color: rgb(255, 255, 255);
-          font-weight: bold;
-          text-align: center;
+        .card-information {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            background-color: #141237;
+            box-shadow: 0px 0px 1px blue;
+            padding: 0.5em;
+            gap: 0.5em;
+            width: auto;
+            border-top: 5px solid rgb(14, 121, 170);
+            .icon {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 25%;
+                .icon-inner {
+                    width: 100%;
+                    text-align: center;
+                    font-size: 3rem;
+                    color: #fff;
+                }
+                span {
+                    display: block;
+                    width: 100%;
+                    font-size: 0.8rem;
+                    font-family: "Quicksand", sans-serif;
+                    color: rgb(255, 255, 255);
+                    font-weight: bold;
+                    text-align: center;
+                }
+            }
+            .info-text {
+                width: 70%;
+                p {
+                    font-size: 0.8rem;
+                    font-family: "Quicksand", sans-serif;
+                    font-weight: lighter;
+                    color: rgb(232, 218, 218);
+                }
+            }
         }
-      }
-      .info-text {
-        width: 70%;
-        p {
-          font-size: 0.8rem;
-          font-family: "Quicksand", sans-serif;
-          font-weight: lighter;
-          color: rgb(232, 218, 218);
-        }
-      }
     }
-  }
-  button {
-    display: block;
-    width: 30%;
-    border: 1px solid rgb(26, 77, 187);
-    font-family: "Quicksand";
-    background-color: transparent;
-    margin: 1em;
-    padding: 1em;
-    color: #0074d9;
-    cursor: pointer;
-  }
+    button {
+        display: block;
+        width: 30%;
+        border: 1px solid rgb(26, 77, 187);
+        font-family: "Quicksand";
+        background-color: transparent;
+        margin: 1em;
+        padding: 1em;
+        color: #0074d9;
+        cursor: pointer;
+    }
 }
 
 @media (max-width: 1060px) {
-  .sidebar-body {
-    .configuration-wrapper {
-      display: block;
-      width: 90%;
+    .sidebar-body {
+        .configuration-wrapper {
+            display: block;
+            width: 90%;
+        }
     }
-  }
-  
-  .movimientos-box {
-    button {
-      display: block;
-      width: 60%;
+    .movimientos-box {
+        button {
+            display: block;
+            width: 60%;
+        }
     }
-  }
 }

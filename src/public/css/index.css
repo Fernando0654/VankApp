@@ -82,7 +82,7 @@ header {
   align-items: center;
   justify-content: center;
   width: 100%;
-  background-color: #153b6d;
+  background-color: #172c47;
   box-shadow: 0px 0px 5px gray;
 }
 header .navbar-icon {
@@ -203,7 +203,6 @@ main .login-wrapper {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-color: #ffffff;
   background: url(../assets/img/bg-pattern-bottom.svg);
   background-repeat: no-repeat;
   background-size: 40%;
@@ -232,22 +231,23 @@ main .login-wrapper .expo-info button {
   color: #fff;
   border: none;
   border-radius: 30px;
-  background-color: #3556ca;
+  background-color: #161515;
   cursor: pointer;
+  transition: 0.5s ease;
 }
 main .login-wrapper .expo-info button:hover {
-  background-color: blue;
+  background-color: #1e1e5e;
 }
 main .login-wrapper .login {
   display: flex;
   align-items: center;
-  width: 30%;
-  max-width: 700px;
+  width: 50%;
+  max-width: 400px;
   margin-top: 0.5em;
 }
 main .login-wrapper .login form {
-  width: 100%;
-  background-color: #082946;
+  width: 75%;
+  background-color: #161515;
   box-shadow: 0px 0px 10px black;
 }
 main .login-wrapper .login form img {
@@ -280,10 +280,11 @@ main .login-wrapper .login form .input-box input[type=password] {
   color: #fff;
   font-family: "Gemunu";
   font-style: 1rem;
+  outline: none;
 }
 main .login-wrapper .login form .input-box input[type=text]:focus,
 main .login-wrapper .login form .input-box input[type=password]:focus {
-  outline: 1px solid #0074d9;
+  outline: 1px solid #7d8791;
 }
 main .login-wrapper .login form .input-box .forgot {
   font-size: 0.8rem;
@@ -452,6 +453,10 @@ main .login-wrapper .login form .input-box input[type=password]:focus {
   }
 }
 .panel-user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-image: url(../assets/img/bg_user_panel.jpg);
   background-position: center;
   background-attachment: fixed;
@@ -464,11 +469,10 @@ main .login-wrapper .login form .input-box input[type=password]:focus {
   align-items: center;
   justify-content: center;
   width: 95%;
-  max-width: 1000px;
-  margin: auto;
+  max-width: 800px;
 }
 .panel-user .panel-header h1 {
-  width: 85%;
+  width: 100%;
   text-align: left;
   font-family: "Quicksand";
   font-size: 1.7rem;
@@ -477,8 +481,7 @@ main .login-wrapper .login form .input-box input[type=password]:focus {
 }
 .panel-user .panel-action {
   width: 95%;
-  max-width: 1000px;
-  margin: auto;
+  max-width: 800px;
   display: grid;
   grid-template-columns: repeat(2fr);
   grid-template-rows: repeat(2fr);
@@ -627,7 +630,7 @@ main .login-wrapper .login form .input-box input[type=password]:focus {
   font-weight: lighter;
 }
 .movimientos-wrapper .component-header .component-route.movimientos-route {
-  width: 85%;
+  width: 100%;
 }
 .movimientos-wrapper .component-header .component-route.movimientos-route h1 {
   border-left: 7px solid red;
@@ -817,6 +820,46 @@ main .login-wrapper .login form .input-box input[type=password]:focus {
   padding: 1em;
 }
 
+.movimiento {
+  width: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  box-shadow: 0px 0px 5px black;
+  padding: 1em;
+}
+.movimiento h1 {
+  font-family: "Gemunu", sans-serif;
+  text-align: center;
+  font-weight: lighter;
+}
+.movimiento p {
+  font-weight: lighter;
+  font-size: 1.4rem;
+}
+.movimiento .warning {
+  display: block;
+  width: 100%;
+  background-color: rgba(201, 201, 25, 0.726);
+  padding-top: 1em;
+  padding-bottom: 1em;
+  text-align: center;
+}
+.movimiento .movimiento-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.movimiento .movimiento-btn a,
+.movimiento .movimiento-btn button {
+  display: block;
+  padding: 1em;
+  font-size: 1.2rem;
+}
+
 @media (max-width: 1060px) {
   .movimientos-wrapper .component-header .component-route h1 a {
     display: block;
@@ -906,7 +949,7 @@ main .login-wrapper .login form .input-box input[type=password]:focus {
   }
 }
 .transacciones-wrapper .component-header .component-route.transacciones-route {
-  width: 85%;
+  width: 100%;
 }
 .transacciones-wrapper .component-header .component-route.transacciones-route h1 {
   border-left: 7px solid #9DD664;
@@ -1302,7 +1345,7 @@ main .login-wrapper .login form .input-box input[type=password]:focus {
 }
 
 .component-header .component-route.config-route {
-  width: 85%;
+  width: 100%;
 }
 .component-header .component-route.config-route h1 {
   border-left: 7px solid #000;
@@ -1561,10 +1604,13 @@ main .login-wrapper .login form .input-box input[type=password]:focus {
 }
 .content {
   width: 80%;
+  max-width: 700px;
   margin: auto;
   margin-bottom: 2em;
 }
-.content h1, .content h2, .content h3 {
+.content h1,
+.content h2,
+.content h3 {
   text-align: center;
   font-family: "Gemunu", cursive;
 }
@@ -1581,7 +1627,8 @@ main .login-wrapper .login form .input-box input[type=password]:focus {
   font-size: 1.2rem;
   line-height: 2;
 }
-.content .content-box li, .content .content-box ol {
+.content .content-box li,
+.content .content-box ol {
   list-style: square;
   padding: 0.5em;
   font-size: 1.2rem;

@@ -1,38 +1,46 @@
 <div class="wrapper-layer" aria-hidden="true"></div>
 <header>
   <div class="logo-img">
-    <a href="/panel"><h1>Vank App <span>Donde el dinero ocurre</span></h1></a>
+    <a href="/panel">
+      <h1>Vank App <span>Donde el dinero ocurre</span></h1>
+    </a>
   </div>
   <div class="navbar-icon">
     <i class="fa fa-bars navicon" aria-hidden="true"></i>
   </div>
   <ul class="nav">
     {{#if user}}
-      <li>
-        <a href="/logout">
-        <i class="fa fa-sign-out" aria-hidden="true"></i>
-          CERRAR SESIÓN</a>
-      </li>
+    <li>
+      <a href="/panel"><i class="fa fa-home" aria-hidden="true"></i> Inicio</a>
+    </li>
     {{else}}
-      <li>
-        <a href="/"><i class="fa fa-home" aria-hidden="true"></i> Inicio</a>
-      </li>
-      <li>
-        <a href="/about">Sobre nosotros</a>
-      </li>
-      <li>
-        <a href="/docs"><i class="fa fa-info-circle" aria-hidden="true"></i>
-          ¿Cómo funciona?</a>
-      </li>
-      <li>
-        <a href="/help">Ayuda</a>
-      </li>
-      <li>
-        <a href="/signup">
+    <li>
+      <a href="/"><i class="fa fa-home" aria-hidden="true"></i> Inicio</a>
+    </li>
+    {{/if}}
+    <li>
+      <a href="/about">Sobre nosotros</a>
+    </li>
+    <li>
+      <a href="/docs"><i class="fa fa-info-circle" aria-hidden="true"></i>
+        ¿Cómo funciona?</a>
+    </li>
+    <li>
+      <a href="/help">Ayuda</a>
+    </li>
+    {{#if user}}
+    <li>
+      <a href="/logout">
+        <i class="fa fa-sign-out" aria-hidden="true"></i>
+        CERRAR SESIÓN</a>
+    </li>
+    {{else}}
+    <li>
+      <a href="/signup">
         <i class="fa fa-sign-in" aria-hidden="true"></i>
         Crear una cuenta
-        </a>
-      </li>
+      </a>
+    </li>
     {{/if}}
   </ul>
 </header>

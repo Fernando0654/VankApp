@@ -1,140 +1,138 @@
 @use "../util/mixins" as mix;
-
 .panel-user {
-  background-image: url(../assets/img/bg_user_panel.jpg);
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover;
-  min-height: 100vh;
-  .panel-header {
-    @include mix.displayHorizontal;
-    width: 95%;
-    max-width: 1000px;
-    margin: auto;
-    h1 {
-      width: 85%;
-      text-align: left;
-      font-family: "Quicksand";
-      font-size: 1.7rem;
-      font-weight: lighter;
-      color: rgb(0, 0, 0);
-    }
-  }
-  .panel-action {
-    width: 95%;
-    max-width: 1000px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(2fr);
-    grid-template-rows: repeat(2fr);
-    gap: 1.5em;
-    .panel-box {
-      background-color: #ffffff;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9);
-      padding: 1em;
-      border-left: 10px solid #1a4d79;
-      h2 {
-        width: 100%;
-        text-align: center;
-        font-family: "Quicksand";
-        font-size: 1.2rem;
-        margin: 0;
-        padding-bottom: 0.5em;
-        border-bottom: 1px solid rgba(48, 35, 82, 0.604);
-        color: #1a4d79;
-      }
-      .box-body {
+    @include mix.displayVertical;
+    background-image: url(../assets/img/bg_user_panel.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 100vh;
+    .panel-header {
         @include mix.displayHorizontal;
-        .icon {
-          text-align: center;
-          font-size: 3.5rem;
-          width: 40%;
-          color: #2373ba;
+        width: 95%;
+        max-width: 800px;
+        h1 {
+            width: 100%;
+            text-align: left;
+            font-family: "Quicksand";
+            font-size: 1.7rem;
+            font-weight: lighter;
+            color: rgb(0, 0, 0);
         }
-        p {
-          width: 60%;
-          font-size: 1rem;
-          font-family: "Quicksand";
-          font-weight: lighter;
-          padding-bottom: 1em;
-          color: #1a4d79;
+    }
+    .panel-action {
+        width: 95%;
+        max-width: 800px;
+        display: grid;
+        grid-template-columns: repeat(2fr);
+        grid-template-rows: repeat(2fr);
+        gap: 1.5em;
+        .panel-box {
+            background-color: #ffffff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9);
+            padding: 1em;
+            border-left: 10px solid #1a4d79;
+            h2 {
+                width: 100%;
+                text-align: center;
+                font-family: "Quicksand";
+                font-size: 1.2rem;
+                margin: 0;
+                padding-bottom: 0.5em;
+                border-bottom: 1px solid rgba(48, 35, 82, 0.604);
+                color: #1a4d79;
+            }
+            .box-body {
+                @include mix.displayHorizontal;
+                .icon {
+                    text-align: center;
+                    font-size: 3.5rem;
+                    width: 40%;
+                    color: #2373ba;
+                }
+                p {
+                    width: 60%;
+                    font-size: 1rem;
+                    font-family: "Quicksand";
+                    font-weight: lighter;
+                    padding-bottom: 1em;
+                    color: #1a4d79;
+                }
+            }
+            .box-btn {
+                @include mix.displayHorizontal;
+                justify-content: end;
+                gap: 1em;
+                width: 100%;
+                button {
+                    font-family: "Quicksand";
+                    font-weight: bold;
+                    padding: 1em;
+                    border: 1px solid #1a4d79;
+                    color: #1a4d79;
+                    border-radius: 0px;
+                    background-color: transparent;
+                    cursor: pointer;
+                    &:hover {
+                        border: 1px solid rgb(55, 6, 55);
+                        color: rgb(65, 11, 65);
+                    }
+                }
+            }
         }
-      }
-      .box-btn {
-        @include mix.displayHorizontal;
-        justify-content: end;
-        gap: 1em;
-        width: 100%;
-        button {
-          font-family: "Quicksand";
-          font-weight: bold;
-          padding: 1em;
-          border: 1px solid #1a4d79;
-          color: #1a4d79;
-          border-radius: 0px;
-          background-color: transparent;
-          cursor: pointer;
-          &:hover {
-            border: 1px solid rgb(55, 6, 55);
-            color: rgb(65, 11, 65);
-          }
+        .movimientos {
+            grid-column: 1/2;
+            grid-row: 1/2;
         }
-      }
+        .transacciones {
+            grid-column: 2/2;
+            grid-row: 1/2;
+        }
+        .cartera {
+            grid-column: 1/2;
+            grid-row: 2/2;
+        }
+        .configuracion {
+            grid-column: 2/2;
+            grid-row: 2/2;
+        }
     }
-    .movimientos {
-      grid-column: 1/2;
-      grid-row: 1/2;
-    }
-    .transacciones {
-      grid-column: 2/2;
-      grid-row: 1/2;
-    }
-    .cartera {
-      grid-column: 1/2;
-      grid-row: 2/2;
-    }
-    .configuracion {
-      grid-column: 2/2;
-      grid-row: 2/2;
-    }
-  }
 }
 
 @media (max-width: 1060px) {
-  .panel-user {
-    width: 100%;
-    .panel-header {
-      @include mix.displayHorizontal;
-      width: 95%;
-      max-width: 1000px;
-      margin: auto;
-      h1 {
+    .panel-user {
         width: 100%;
-        text-align: left;
-        font-family: "Quicksand";
-        font-size: 1rem;
-        font-weight: lighter;
-        color: rgb(0, 0, 0);
-      }
+        .panel-header {
+            @include mix.displayHorizontal;
+            width: 95%;
+            max-width: 1000px;
+            margin: auto;
+            h1 {
+                width: 100%;
+                text-align: left;
+                font-family: "Quicksand";
+                font-size: 1rem;
+                font-weight: lighter;
+                color: rgb(0, 0, 0);
+            }
+        }
+        .panel-action {
+            .movimientos {
+                grid-column: 1/1;
+                grid-row: 1/1;
+            }
+            .transacciones {
+                grid-column: 1/1;
+                grid-row: 2/2;
+            }
+            .configuracion {
+                grid-column: 1/1;
+                grid-row: 3/3;
+            }
+            .contactos {
+                grid-column: 1/1;
+                grid-row: 4/4;
+                margin-bottom: 2em;
+            }
+        }
     }
-    .panel-action {
-      .movimientos {
-        grid-column: 1/1;
-        grid-row: 1/1;
-      }
-      .transacciones {
-        grid-column: 1/1;
-        grid-row: 2/2;
-      }
-      .configuracion {
-        grid-column: 1/1;
-        grid-row: 3/3;
-      }
-      .contactos {
-        grid-column: 1/1;
-        grid-row: 4/4;
-        margin-bottom: 2em;
-      }
-    }
-  }
 }
