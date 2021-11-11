@@ -231,7 +231,7 @@
 }
 
 .movimiento {
-    width: 50%;
+    width: 30%;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -245,8 +245,9 @@
         font-weight: lighter;
     }
     p {
+        font-family: "Quicksand", sans-serif;
         font-weight: lighter;
-        font-size: 1.4rem;
+        font-size: 1rem;
     }
     .warning {
         display: block;
@@ -263,9 +264,22 @@
         justify-content: center;
         a,
         button {
+            width: 50%;
             display: block;
             padding: 1em;
             font-size: 1.2rem;
+            text-align: center;
+            font-family: "Quicksand", sans-serif;
+            cursor: pointer;
+        }
+        button {
+            background-color: #23a22d;
+            border: none;
+            color: #fff;
+            font-size: 0.9rem;
+            &:hover {
+                background-color: #177b1f;
+            }
         }
     }
 }

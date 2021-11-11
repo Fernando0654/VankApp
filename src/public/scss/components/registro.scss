@@ -65,11 +65,10 @@
           font-size: 1rem;
           border: none;
           appearance: none;
-          &:disabled {
-            background-color: transparent;
-            border: 1px solid rgba(233, 224, 224, 0.303);
-            color: #fff;
-          }
+          background-color: transparent;
+          color: rgb(213, 195, 195);
+          border: 1px solid rgb(170, 155, 155);
+          cursor: not-allowed;
         }
       }
       .input-checkbox {

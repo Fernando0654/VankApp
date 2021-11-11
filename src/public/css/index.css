@@ -246,7 +246,7 @@ main .login-wrapper .login {
   margin-top: 0.5em;
 }
 main .login-wrapper .login form {
-  width: 75%;
+  width: 85%;
   background-color: #161515;
   box-shadow: 0px 0px 10px black;
 }
@@ -300,9 +300,10 @@ main .login-wrapper .login form .btn-group {
   margin-top: 1em;
 }
 main .login-wrapper .login form .btn-group button {
-  width: 35%;
+  width: 40%;
   margin: 1em;
   font-family: "Quicksand", sans-serif;
+  font-size: 1.2vw;
   border: none;
   padding: 1em;
   border-radius: 30px;
@@ -821,7 +822,7 @@ main .login-wrapper .login form .input-box input[type=password]:focus {
 }
 
 .movimiento {
-  width: 50%;
+  width: 30%;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -836,8 +837,9 @@ main .login-wrapper .login form .input-box input[type=password]:focus {
   font-weight: lighter;
 }
 .movimiento p {
+  font-family: "Quicksand", sans-serif;
   font-weight: lighter;
-  font-size: 1.4rem;
+  font-size: 1rem;
 }
 .movimiento .warning {
   display: block;
@@ -855,9 +857,22 @@ main .login-wrapper .login form .input-box input[type=password]:focus {
 }
 .movimiento .movimiento-btn a,
 .movimiento .movimiento-btn button {
+  width: 50%;
   display: block;
   padding: 1em;
   font-size: 1.2rem;
+  text-align: center;
+  font-family: "Quicksand", sans-serif;
+  cursor: pointer;
+}
+.movimiento .movimiento-btn button {
+  background-color: #23a22d;
+  border: none;
+  color: #fff;
+  font-size: 0.9rem;
+}
+.movimiento .movimiento-btn button:hover {
+  background-color: #177b1f;
 }
 
 @media (max-width: 1060px) {
@@ -1219,11 +1234,10 @@ main .login-wrapper .login form .input-box input[type=password]:focus {
   font-size: 1rem;
   border: none;
   appearance: none;
-}
-.signup-wrapper form .input-group.two select:disabled {
   background-color: transparent;
-  border: 1px solid rgba(233, 224, 224, 0.303);
-  color: #fff;
+  color: #d5c3c3;
+  border: 1px solid #aa9b9b;
+  cursor: not-allowed;
 }
 .signup-wrapper form .input-group .input-checkbox {
   position: relative;
