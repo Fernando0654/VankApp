@@ -1,3 +1,14 @@
 .swal-button--confirm {
-    background: rgb(52, 90, 148);
+  background: rgb(52, 90, 148);
+}
+
+.swal-modal {
+  font-family: "Quicksand", sans-serif;
+  &.info-modal {
+    max-width: 300px;
   }
+  .swal-text {
+    line-height: 2;
+    font-weight: 700;
+  }
+}

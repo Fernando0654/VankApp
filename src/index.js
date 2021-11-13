@@ -55,6 +55,7 @@ app.use(favicon(__dirname + '/public/favicon1.ico'));
 app.use((req, res, next) => {
   res.locals.success_msg = req.flash("success_msg");
   res.locals.error_msg = req.flash("error_msg");
+  res.locals.info_msg = req.flash("info_msg");
   res.locals.error = req.flash("error");
   res.locals.user = req.user || null;
   res.locals.saldo = req.saldo;
@@ -78,7 +79,7 @@ app.use(express.static(path.join(__dirname, "public")));
 // Iniciar servidor
 
 app.listen(app.get("port"), () => {
-  console.log("Server on port: ", app.get("port"));
+  console.log("El servidor está en el puerto: ", app.get("port"));
 });
 
 app.use(function(req, res, next){

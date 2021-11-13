@@ -9,3 +9,12 @@
     swal("Error", "{{error_msg}}", "error", { button: "Continuar"});
   </script>
 {{/if}}
+
+{{#if info_msg}}
+  <script>
+    swal("Info", `{{info_msg}}`, "info", {
+      buttons: ["Atrás", "Imprimir"],
+      className: "info-modal"
+      });
+  </script>
+{{/if}}

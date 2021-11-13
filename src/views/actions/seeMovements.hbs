@@ -69,9 +69,10 @@
                 <form
                   action="/movimiento/delete/{{_id}}?_method=DELETE"
                   method="post"
+                  class="deleteForm"
                 >
                 <input type="hidden" name="_method" value="DELETE">
-                <button type="submit">
+                <button type="button" onclick="deleteThis()">
                   <i class="fa fa-trash-o" aria-hidden="true"></i>
                 </button>
                 </form>

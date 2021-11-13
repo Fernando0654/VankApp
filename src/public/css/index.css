@@ -42,7 +42,8 @@ body::-webkit-scrollbar-track:active {
   background: #d4d4d4;
 }
 
-ol, li {
+ol,
+li {
   list-style: none;
 }
 
@@ -718,7 +719,7 @@ main .login-wrapper .login form .input-box input[type=password]:focus {
 .movimientos-wrapper .sidebar-body .badge {
   display: block;
   width: 100%;
-  background-color: #9dff005d;
+  background-color: #dddce4;
   font-family: "Quicksand";
   text-align: center;
   padding: 0.5em;
@@ -819,60 +820,6 @@ main .login-wrapper .login form .input-box input[type=password]:focus {
 .movimientos-wrapper .sidebar-body .movimientos-box.tabla table th,
 .movimientos-wrapper .sidebar-body .movimientos-box.tabla table td {
   padding: 1em;
-}
-
-.movimiento {
-  width: 30%;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  box-shadow: 0px 0px 5px black;
-  padding: 1em;
-}
-.movimiento h1 {
-  font-family: "Gemunu", sans-serif;
-  text-align: center;
-  font-weight: lighter;
-}
-.movimiento p {
-  font-family: "Quicksand", sans-serif;
-  font-weight: lighter;
-  font-size: 1rem;
-}
-.movimiento .warning {
-  display: block;
-  width: 100%;
-  background-color: rgba(201, 201, 25, 0.726);
-  padding-top: 1em;
-  padding-bottom: 1em;
-  text-align: center;
-}
-.movimiento .movimiento-btn {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-.movimiento .movimiento-btn a,
-.movimiento .movimiento-btn button {
-  width: 50%;
-  display: block;
-  padding: 1em;
-  font-size: 1.2rem;
-  text-align: center;
-  font-family: "Quicksand", sans-serif;
-  cursor: pointer;
-}
-.movimiento .movimiento-btn button {
-  background-color: #23a22d;
-  border: none;
-  color: #fff;
-  font-size: 0.9rem;
-}
-.movimiento .movimiento-btn button:hover {
-  background-color: #177b1f;
 }
 
 @media (max-width: 1060px) {
@@ -1358,6 +1305,17 @@ main .login-wrapper .login form .input-box input[type=password]:focus {
   background: #345a94;
 }
 
+.swal-modal {
+  font-family: "Quicksand", sans-serif;
+}
+.swal-modal.info-modal {
+  max-width: 300px;
+}
+.swal-modal .swal-text {
+  line-height: 2;
+  font-weight: 700;
+}
+
 .component-header .component-route.config-route {
   width: 100%;
 }
@@ -1486,9 +1444,10 @@ main .login-wrapper .login form .input-box input[type=password]:focus {
   align-items: center;
   justify-content: center;
   padding: 0.5em;
-  margin: 1em;
+  margin: 0.5em;
   background-color: #1d1d52;
   box-shadow: 0px 0px 10px gray;
+  max-width: 250px;
 }
 .movimientos-box .wrapper-contacts .card-contacto .fa-user {
   display: block;

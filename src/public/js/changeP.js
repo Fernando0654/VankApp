@@ -41,14 +41,37 @@ function changePassword() {
         type: "password",
       },
     },
-    button: { text: "Cambiar ahora" },
-  }).then((newPassword) => {
-    if (!newPassword) {
+    button: { text: "Cotninuar" },
+  }).then((newPassword1) => {
+    if (!newPassword1) {
       swal("Error", "El campo no puede estar vacío", "error", {
         button: "Cerrar",
       });
       return;
     }
-    window.location.href = `/changePassword/${newPassword}`;
+    swal({
+      content: {
+        element: "input",
+        attributes: {
+          placeholder: "Repetir Contraseña",
+          type: "password",
+        },
+      },
+      button: { text: "Cotninuar" },
+    }).then(newPassword2 => {
+      if (!newPassword2) {
+        swal("Error", "El campo no puede estar vacío", "error", {
+          button: "Cerrar",
+        });
+        return;
+      }
+      if( newPassword1 !== newPassword2 ) {
+        swal("Error", "Las contraseñas no coinciden", "error", {
+          button: "Cerrar",
+        });
+        return;
+      }
+      window.location.href = `/changePassword/${newPassword2}`;
+    })
   });
 }

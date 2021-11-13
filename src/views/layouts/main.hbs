@@ -18,5 +18,24 @@
       {{> messages}}
       {{{body}}}
     </main>
+    <script>
+  function deleteThis() {
+    const form = document.querySelector(".deleteForm");
+    swal({
+      title: "¿Estás seguro?",
+      text: "Esta acción no se puede deshacer",
+      icon: "warning",
+      buttons: ["Cancelar", "Borrar"],
+      dangerMode: true,
+      })
+      .then((willDelete) => {
+        if (willDelete) {
+          form.submit();
+          } else {
+            swal("Operación cancelada", {button: "Continuar"});
+            }
+        });
+    }
+</script>
   </body>
 </html>
