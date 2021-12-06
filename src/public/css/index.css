@@ -116,7 +116,7 @@ header .nav {
 }
 header .nav li a {
   display: block;
-  font-size: 1rem;
+  font-size: 1vw;
   padding: 1em;
   color: #fff;
   font-family: "Quicksand", cursive;
@@ -181,6 +181,7 @@ header .nav li a:hover {
   }
   header .nav li a {
     color: #1a1717;
+    font-size: 3.5vw;
   }
   header .nav li a:hover {
     color: #8bb9e1;
@@ -399,7 +400,7 @@ main .login-wrapper .login form .input-box input[type=password] {
     background-color: transparent;
     color: #fff;
     font-family: "Gemunu";
-    font-style: 1rem;
+    font-size: 1rem;
   }
   main .login-wrapper .login form .input-box input[type=text]:focus,
 main .login-wrapper .login form .input-box input[type=password]:focus {
@@ -412,16 +413,17 @@ main .login-wrapper .login form .input-box input[type=password]:focus {
   }
   main .login-wrapper .login form .btn-group {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
     margin-top: 1em;
   }
   main .login-wrapper .login form .btn-group button {
-    width: 35%;
+    width: 80%;
     margin: 1em;
     font-family: "Quicksand", sans-serif;
+    font-size: 1rem;
     border: none;
     padding: 1em;
     border-radius: 30px;
@@ -1016,93 +1018,6 @@ main .login-wrapper .login form .input-box input[type=password]:focus {
     margin: 0;
   }
 }
-.cartera-wrapper .component-header .component-route.cartera-route {
-  width: 85%;
-}
-.cartera-wrapper .component-header .component-route.cartera-route h1 {
-  border-left: 7px solid #6498D6;
-}
-
-.cartera-wrapper .card-user {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  width: 90%;
-  padding: 1em;
-  margin-top: 0.5em;
-  background-color: #f2f2f7;
-  border: 1px solid rgba(213, 201, 201, 0.555);
-}
-.cartera-wrapper .card-user .fa-user-circle {
-  width: 30%;
-  font-size: 8rem;
-}
-.cartera-wrapper .card-user .user-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  align-items: start;
-  font-family: "Quicksand";
-  width: 100%;
-}
-.cartera-wrapper .card-user .user-info h3 {
-  font-size: 1rem;
-  margin: 0.5em;
-  font-weight: 600;
-}
-.cartera-wrapper .card-user .user-info h3 span {
-  font-size: 1rem;
-  padding: 0.4em;
-  font-weight: lighter;
-}
-.cartera-wrapper .card-user .user-info .user-actions {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
-.cartera-wrapper .card-user .user-info .user-actions .fa-wrench {
-  width: 50%;
-  padding: 0.5em;
-  font-size: 0.8rem;
-  color: #0074d9;
-  cursor: pointer;
-}
-.cartera-wrapper .card-user .user-info .user-actions .fa-wrench span {
-  font-family: "Quicksand";
-  padding-left: 0.5em;
-}
-.cartera-wrapper .card-user .user-info .user-actions a {
-  width: 50%;
-  text-align: right;
-  font-size: 0.8rem;
-  color: red;
-  font-weight: bold;
-}
-.cartera-wrapper .user-cards {
-  width: 90%;
-  font-family: "Quicksand";
-}
-.cartera-wrapper .user-cards h2 {
-  font-size: 1.2rem;
-  margin: 0.5em;
-  margin-left: 0;
-}
-.cartera-wrapper .user-cards span {
-  display: inline-block;
-  padding: 1em;
-  border: 1px solid rgba(192, 183, 183, 0.726);
-  font-size: 0.9rem;
-  cursor: pointer;
-}
-.cartera-wrapper .user-cards span .fa-cc-mastercard,
-.cartera-wrapper .user-cards span .fa-cc-visa {
-  color: #0074d9;
-}
-
 .signup-wrapper {
   background: url(../assets/img/bg_signup.jpg);
   background-repeat: no-repeat;

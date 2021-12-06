@@ -32,7 +32,7 @@ header {
         margin-right: 2em;
         li a {
             display: block;
-            font-size: 1rem;
+            font-size: 1vw;
             padding: 1em;
             color: #fff;
             font-family: "Quicksand", cursive;
@@ -90,6 +90,7 @@ header {
                 text-align: center;
                 a {
                     color: rgb(26, 23, 23);
+                    font-size: 3.5vw;
                     &:hover {
                         color: color.$hover_blue;
                     }

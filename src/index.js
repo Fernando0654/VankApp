@@ -50,7 +50,7 @@ app.use(flash());
 var favicon = require('serve-favicon');
 app.use(favicon(__dirname + '/public/favicon1.ico'));
 
-// Variables globales ########################3
+// Variables globales ########################
 
 app.use((req, res, next) => {
   res.locals.success_msg = req.flash("success_msg");
@@ -79,7 +79,7 @@ app.use(express.static(path.join(__dirname, "public")));
 // Iniciar servidor
 
 app.listen(app.get("port"), () => {
-  console.log("El servidor está en el puerto: ", app.get("port"));
+  console.log("El servidor está en el puerto: ", app.get("port"), " del localhost");
 });
 
 app.use(function(req, res, next){

@@ -133,111 +133,112 @@ main {
 }
 
 @media (max-width: 1060px) {
-    main {
-        .login-wrapper {
-            @include mix.displayVertical;
-            .expo-info {
-                width: 90%;
-                h1 {
-                    text-align: center;
-                    font-size: 1.8rem;
-                    margin-top: 2em;
-                }
-                p {
-                    font-size: 1rem;
-                    text-align: center;
-                }
-                button {
-                    margin: auto;
-                    &:hover {
-                        background-color: blue;
-                    }
-                }
-            }
-            .login {
-                width: 90%;
-                form {
-                    width: 100%;
-                    background-color: #082946;
-                    box-shadow: 0px 0px 10px black;
-                    img {
-                        width: 100%;
-                        filter: blur(1px);
-                    }
-                    h2 {
-                        width: 100%;
-                        text-align: center;
-                        color: #fff;
-                        font-family: "Quicksand", sans-serif;
-                        font-size: 1.5rem;
-                    }
-                    .input-box {
-                        @include mix.displayVertical;
-                        width: 100%;
-                        input[type="text"],
-                        input[type="password"] {
-                            width: 80%;
-                            margin: 1em;
-                            margin-bottom: 1.5em;
-                            padding: 1em;
-                            border: none;
-                            border-bottom: 1px solid rgba(233, 224, 224, 0.583);
-                            background-color: transparent;
-                            color: #fff;
-                            font-family: "Gemunu";
-                            font-style: 1rem;
-                            &:focus {
-                                outline: 1px solid #0074d9;
-                            }
-                        }
-                        .forgot {
-                            font-size: 0.8rem;
-                            color: colors.$gray_soft;
-                            font-family: "Quicksand";
-                        }
-                    }
-                    .btn-group {
-                        @include mix.displayHorizontal;
-                        width: 100%;
-                        margin-top: 1em;
-                        button {
-                            width: 35%;
-                            margin: 1em;
-                            font-family: "Quicksand", sans-serif;
-                            border: none;
-                            padding: 1em;
-                            border-radius: 30px;
-                            font-weight: 500;
-                            cursor: pointer;
-                            &:nth-child(1) {
-                                background-color: #fff;
-                                color: #000;
-                            }
-                            &:nth-child(2) {
-                                background-color: transparent;
-                                color: #fff;
-                                border: 1px solid #fff;
-                            }
-                            &:hover {
-                                font-weight: bold;
-                            }
-                        }
-                    }
-                    button {
-                        display: block;
-                        padding: 1em;
-                        font-family: "Quicksand", sans-serif;
-                        background-color: #fff;
-                        color: #000;
-                        border-radius: 30px;
-                        border: none;
-                        margin: auto;
-                        margin-bottom: 0.5em;
-                        font-weight: bold;
-                        cursor: pointer;
-                    }
-                }
-            }
+  main {
+    .login-wrapper {
+      @include mix.displayVertical;
+      .expo-info {
+        width: 90%;
+        h1 {
+          text-align: center;
+          font-size: 1.8rem;
+          margin-top: 2em;
         }
+        p {
+          font-size: 1rem;
+          text-align: center;
+        }
+        button {
+          margin: auto;
+          &:hover {
+            background-color: blue;
+          }
+        }
+      }
+      .login {
+        width: 90%;
+        form {
+          width: 100%;
+          background-color: #082946;
+          box-shadow: 0px 0px 10px black;
+          img {
+            width: 100%;
+            filter: blur(1px);
+          }
+          h2 {
+            width: 100%;
+            text-align: center;
+            color: #fff;
+            font-family: "Quicksand", sans-serif;
+            font-size: 1.5rem;
+          }
+          .input-box {
+            @include mix.displayVertical;
+            width: 100%;
+            input[type="text"],
+            input[type="password"] {
+              width: 80%;
+              margin: 1em;
+              margin-bottom: 1.5em;
+              padding: 1em;
+              border: none;
+              border-bottom: 1px solid rgba(233, 224, 224, 0.583);
+              background-color: transparent;
+              color: #fff;
+              font-family: "Gemunu";
+              font-size: 1rem;
+              &:focus {
+                outline: 1px solid #0074d9;
+              }
+            }
+            .forgot {
+              font-size: 0.8rem;
+              color: colors.$gray_soft;
+              font-family: "Quicksand";
+            }
+          }
+          .btn-group {
+            @include mix.displayVertical;
+            width: 100%;
+            margin-top: 1em;
+            button {
+              width: 80%;
+              margin: 1em;
+              font-family: "Quicksand", sans-serif;
+              font-size: 1rem;
+              border: none;
+              padding: 1em;
+              border-radius: 30px;
+              font-weight: 500;
+              cursor: pointer;
+              &:nth-child(1) {
+                background-color: #fff;
+                color: #000;
+              }
+              &:nth-child(2) {
+                background-color: transparent;
+                color: #fff;
+                border: 1px solid #fff;
+              }
+              &:hover {
+                font-weight: bold;
+              }
+            }
+          }
+          button {
+            display: block;
+            padding: 1em;
+            font-family: "Quicksand", sans-serif;
+            background-color: #fff;
+            color: #000;
+            border-radius: 30px;
+            border: none;
+            margin: auto;
+            margin-bottom: 0.5em;
+            font-weight: bold;
+            cursor: pointer;
+          }
+        }
+      }
     }
+  }
 }
